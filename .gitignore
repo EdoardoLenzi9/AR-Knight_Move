@@ -1,0 +1,6 @@
+*.pt
+*.ini
+.ipynb_checkpoints/
+__pycache__
+.vscode/
+tmp/
