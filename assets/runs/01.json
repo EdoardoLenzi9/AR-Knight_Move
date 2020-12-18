@@ -1,0 +1,25 @@
+[ 
+    {
+        "name": "01_mzn_4x4",
+        "target": "clingo",
+        "n": 8,
+        "k": 2,
+        "knight1":{
+            "x": 1,
+            "y": 1
+        },
+        "knight2":{
+            "x": 1,
+            "y": 2
+        },
+        "occ": [
+            {"x": 2, "y": 2},
+            {"x": 3, "y": 3},
+            {"x": 4, "y": 4}
+        ],
+        "params":[
+            { "search": "int_search" },
+            { "varchoice": "..." }
+        ]
+    }
+]

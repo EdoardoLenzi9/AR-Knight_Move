@@ -14,6 +14,7 @@ import json
 import os
 from os import path
 
+import knights_tour.utils.localizations as loc
 from knights_tour.utils.logger import Logger
 LOG = Logger.getLogger(__name__)
 import sys 
@@ -57,7 +58,7 @@ def decompress_zip(zip_path):
         raise FileNotFoundError(zip_path + ' not found')
 
     with zipfile.ZipFile(zip_path, 'r') as zip:
-        zip.extractall(loc.TMP_PATH)
+        zip.extractall(loc.ASSETS)
 
 
 def to_pickle(obj, path):

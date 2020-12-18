@@ -13,8 +13,15 @@ from knights_tour.utils.logger import Logger
 LOG = Logger.getLogger(__name__)
 
 import knights_tour.utils.file_manager as fm
+import knights_tour.utils.localizations as loc
+from knights_tour.domain.pos import Pos
+from knights_tour.domain.task import Task
+from knights_tour.services.command_builder import CommandBuilder
+from knights_tour.services.output_parser import OutputParser
 
 from os import path
+import subprocess
+import time 
 import sys
 import os 
 
@@ -28,7 +35,7 @@ class CliHandler(object):
     def __init__(self, args):
         if args.run is not None:
             pass
-            #self.run_handler(args.run[0])
+            self.run_handler(args.run[0])
         elif args.clean:
             self.clean_handler()
         else:
@@ -46,8 +53,58 @@ class CliHandler(object):
         LOG.info('clean')
         fm.rmdir('tmp')
 
-    
-   
+
+    def run_handler(self, json_filename):
+        json = fm.from_json(loc.abs_path([loc.RUNS_PATH, json_filename]))
+        for t in json:
+            knight1 = Pos(t["knight1"]["x"], t["knight1"]["y"])
+            knight2 = Pos(t["knight2"]["x"], t["knight2"]["y"])
+            params = {}
+            for p in t['params']:
+                for k in p.keys():
+                    params[k] = p[k]
+
+            occ = []
+            for o in t["occ"]:
+                occ.append(Pos(o["x"], o["y"]))
+            task = Task( t["name"],
+                         t["target"],
+                         t["n"],
+                         t["k"],
+                         knight1,
+                         knight2,
+                         occ,
+                         params )
+            self.task_handler(task)
+
+
+    def task_handler(self, task: Task):
+        print(f"\n\nTask {task.name} started")
+        command = CommandBuilder.build_command(task) 
+        output = self.run_command(command)   
+        fm.to_txt(output, loc.abs_path([loc.LOGS_PATH, task.name+".log"]))
+        solution = OutputParser.parse(task, output)
+        print(solution)
+
+
+    def run_command(self, command: str):
+        command = ' '.join([command])
+        start_time = time.time()
+        output = ""
+        with subprocess.Popen(command, 
+                                   shell=True, 
+                                   stdout=subprocess.PIPE, 
+                                   stderr=subprocess.STDOUT) as process:
+            while process.poll() is None:
+                time.sleep(1)
+                for line in iter(process.stdout.readline, b''):
+                    line = str(line, 'utf-8')
+                    output += line
+            print("Task ended in: " + str(int(time.time()-start_time)) + " sec\n\n")
+            process.kill()
+        return output
+        
+
 # Used when spawned in a new process
 
 if __name__ == '__main__':
