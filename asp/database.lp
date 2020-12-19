@@ -1,0 +1,3 @@
+% facts
+
+position(1,1,1).

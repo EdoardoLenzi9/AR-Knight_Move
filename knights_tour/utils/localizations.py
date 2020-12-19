@@ -26,20 +26,31 @@ def abs_path(relative_path: list) -> str:
     return abs_path
 
 
+# String Localizations
+
+MINIZINC = 'minizinc'
+CLINGO = 'clingo'
+
+
 # Files Localizations
 
 ASSETS = 'assets'
 RUNS = 'runs'
 LOGS = 'logs'
+ASP = 'asp'
+
+CLINGO_MODEL = "knights_tour.lp"
+CLINGO_DATABASE = "database.lp"
+MINIZINC_MODEL = "knights_tour.mzn"
+MINIZINC_DATABASE = "database.dzn"
 
 RUNS_PATH = abs_path([ASSETS, RUNS])
 LOGS_PATH = abs_path([ASSETS, LOGS])
+CLINGO_MODEL_PATH = abs_path([ASP, CLINGO_MODEL])
+CLINGO_DATABASE_PATH = abs_path([ASP, CLINGO_DATABASE])
+MINIZINC_MODEL_PATH = abs_path([MINIZINC, MINIZINC_MODEL])
+MINIZINC_DATABASE_PATH = abs_path([MINIZINC, MINIZINC_DATABASE])
 
-
-# String Localizations
-
-MINIZINC = 'minizinc'
-CLINGO = 'clingo'
 
 # Commands Localizations
 

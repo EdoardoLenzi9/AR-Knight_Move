@@ -48,6 +48,10 @@ class Parser(object):
                                 help='Clean temporary/useless files')
 
 
+        self.parser.add_argument('--generate', dest='generate', metavar='N', type=str, nargs=1,
+                                help='Generate a new random benchmark (run) with the specified name')
+
+
         self.parser.add_argument('--run', dest='run', metavar='N', type=str, nargs=1,
                                 help='Run an array of tasks (remember to specify the name of your run .json)')
                                 

@@ -73,7 +73,7 @@ def from_pickle(path):
 
 def to_json(obj, path):
     with open(path, 'w') as outfile:
-        json.dump(obj, outfile)
+        json.dump(obj, outfile, indent = 4)
 
 
 def json_stringify(obj):

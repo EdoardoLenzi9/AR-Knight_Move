@@ -17,10 +17,12 @@ import knights_tour.utils.localizations as loc
 from knights_tour.domain.pos import Pos
 from knights_tour.domain.task import Task
 from knights_tour.services.command_builder import CommandBuilder
+from knights_tour.services.model_builder import ModelBuilder
 from knights_tour.services.output_parser import OutputParser
 
 from os import path
 import subprocess
+import random
 import time 
 import sys
 import os 
@@ -33,8 +35,9 @@ class CliHandler(object):
 
 
     def __init__(self, args):
-        if args.run is not None:
-            pass
+        if args.generate is not None:
+            self.generate_handler(args.generate[0])
+        elif args.run is not None:
             self.run_handler(args.run[0])
         elif args.clean:
             self.clean_handler()
@@ -52,6 +55,40 @@ class CliHandler(object):
     def clean_handler(self):
         LOG.info('clean')
         fm.rmdir('tmp')
+
+
+    def generate_handler(self, json_filename):
+        clingo_params = { "varchoice": "varchoice", 
+                          "...": "..." }
+        minizinc_params = { "varchoice": "varchoice", 
+                          "...": "..." }
+        tasks = []
+        for n in [8, 10, 12, 14, 16]:
+            for i in range(0,20):
+                k = random.randint(4, 10)
+                counter = 0
+                occ = []
+                mtx = [[False for y in range(1,n+1)] for x in range(1,n+1)]
+                while counter < k + 2:
+                    x = random.randint(1, n)
+                    y = random.randint(1, n)
+                    if not mtx[x-1][y-1]:
+                        mtx[x-1][y-1] = True 
+                        occ.append({"x": x, "y": y})
+                        counter += 1
+                knight1 = occ.pop()
+                knight2 = occ.pop()
+                for target in [loc.MINIZINC, loc.CLINGO]:
+                    tasks.append({
+                        "name": f"{i}_{n}x{n}_{target}",
+                        "n": n,
+                        "k": k,
+                        "knight1": knight1,
+                        "knight2": knight2,
+                        "occ": occ,
+                        "params": clingo_params if target == loc.CLINGO else minizinc_params
+                    })
+        fm.to_json(tasks, loc.abs_path([loc.RUNS_PATH, json_filename]))
 
 
     def run_handler(self, json_filename):
@@ -79,8 +116,12 @@ class CliHandler(object):
 
 
     def task_handler(self, task: Task):
+        
         print(f"\n\nTask {task.name} started")
+        ModelBuilder.build_model(task) 
         command = CommandBuilder.build_command(task) 
+        fm.to_txt(command, loc.abs_path([task.folder, "command.sh"]))
+
         output = self.run_command(command)   
         fm.to_txt(output, loc.abs_path([loc.LOGS_PATH, task.name+".log"]))
         solution = OutputParser.parse(task, output)

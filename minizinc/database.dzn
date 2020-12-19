@@ -1,0 +1,5 @@
+n = 4;
+initial_occ = array2d(CELL_DOMAIN, CELL_DOMAIN, [ 2, 0, 0, 0, 
+                                                  0, 0, 0, 0, 
+                                                  0, 0, 0, 0, 
+                                                  0, 0, 0, 0,]);

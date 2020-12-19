@@ -7,6 +7,8 @@ __license__ = 'WTFPL2.0'
 
 
 from knights_tour.domain.pos import Pos
+import knights_tour.utils.localizations as loc
+import os
 
 
 class Task(object):
@@ -22,6 +24,10 @@ class Task(object):
         self.knight2 = knight2
         self.occ = occ
         self.params = params
+        self.folder = loc.abs_path([loc.LOGS_PATH, name])
+        try:
+            os.mkdir(self.folder)
+        except: pass 
            
 
     def __eq__(self, other):
