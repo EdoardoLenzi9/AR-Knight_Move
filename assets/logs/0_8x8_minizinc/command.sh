@@ -34,16 +34,16 @@ LIB=$MZN_PATH"/share/minizinc/std"
 
 
 if test "$#" -ne 2; then
-	$MINIZINC 	--solver [[solver]]                    	\
+	$MINIZINC 	--solver gecode                    	\
 		      	-I $LIB                               	\
-		      	[[allsolutions]]						\
-		      	[[timeout]]				            	\
+		      	--all-solutions						\
+		      	--solver-time-limit 300000				            	\
 			  	$1 
 else 
-	$MINIZINC 	--solver [[solver]]                    	\
+	$MINIZINC 	--solver gecode                    	\
 		      	-I $LIB                               	\
-		      	[[allsolutions]]						\
-		      	[[timeout]]				            	\
+		      	--all-solutions						\
+		      	--solver-time-limit 300000				            	\
 			  	$1 										\
 				-d $2
 fi

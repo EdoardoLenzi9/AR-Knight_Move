@@ -54,14 +54,18 @@ class CliHandler(object):
 
     def clean_handler(self):
         LOG.info('clean')
-        fm.rmdir('tmp')
+        try:
+            fm.rmdir(loc.LOGS_PATH)
+        except: pass
+        os.mkdir(loc.LOGS_PATH)
 
 
     def generate_handler(self, json_filename):
-        clingo_params = { "varchoice": "varchoice", 
-                          "...": "..." }
-        minizinc_params = { "varchoice": "varchoice", 
-                          "...": "..." }
+        clingo_params = [{ "varchoice": "varchoice"}, 
+                         {"...": "..." }]
+        minizinc_params = [{ "solver": "gecode"}, 
+                           {"allsolutions": "--all-solutions" }, 
+                           {"timeout": "--solver-time-limit 300000" }]
         tasks = []
         for n in [8, 10, 12, 14, 16]:
             for i in range(0,20):
@@ -81,6 +85,7 @@ class CliHandler(object):
                 for target in [loc.MINIZINC, loc.CLINGO]:
                     tasks.append({
                         "name": f"{i}_{n}x{n}_{target}",
+                        "target": target,
                         "n": n,
                         "k": k,
                         "knight1": knight1,
@@ -120,8 +125,7 @@ class CliHandler(object):
         print(f"\n\nTask {task.name} started")
         ModelBuilder.build_model(task) 
         command = CommandBuilder.build_command(task) 
-        fm.to_txt(command, loc.abs_path([task.folder, "command.sh"]))
-
+        
         output = self.run_command(command)   
         fm.to_txt(output, loc.abs_path([loc.LOGS_PATH, task.name+".log"]))
         solution = OutputParser.parse(task, output)
@@ -132,10 +136,10 @@ class CliHandler(object):
         command = ' '.join([command])
         start_time = time.time()
         output = ""
-        with subprocess.Popen(command, 
-                                   shell=True, 
-                                   stdout=subprocess.PIPE, 
-                                   stderr=subprocess.STDOUT) as process:
+        with subprocess.Popen( command, 
+                               shell=True, 
+                               stdout=subprocess.PIPE, 
+                               stderr=subprocess.STDOUT) as process:
             while process.poll() is None:
                 time.sleep(1)
                 for line in iter(process.stdout.readline, b''):

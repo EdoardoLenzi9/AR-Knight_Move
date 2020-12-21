@@ -1,6 +1,9 @@
 from knights_tour.domain.task import Task
 from knights_tour.domain.pos import Pos
 import knights_tour.utils.localizations as loc
+import knights_tour.utils.file_manager as fm
+
+import os 
 
 
 class CommandBuilder(object):
@@ -15,12 +18,19 @@ class CommandBuilder(object):
 
     @staticmethod
     def build_mzn_command(task: Task):
-        return "ls -la"
+        cmd = fm.from_txt(loc.MINIZINC_CMD_PATH)
+        cmd = cmd.replace('[[solver]]', task.params['solver'])
+        cmd = cmd.replace('[[allsolutions]]', task.params['allsolutions'])
+        cmd = cmd.replace('[[timeout]]', task.params['timeout'])
+        fm.to_txt(cmd, loc.abs_path([task.folder, "command.sh"]))
+        return f"sh {os.path.join(task.folder, 'command.sh')} {os.path.join(task.folder, 'knights_tour.mzn')} {os.path.join(task.folder, 'knights_tour.dzn')}"
 
 
     @staticmethod
     def build_clingo_command(task: Task):
-        cmd = loc.CLINGO_CMD
+        cmd = fm.from_txt(loc.CLINGO_CMD_PATH)
         cmd = cmd.replace('[[n]]', str(task.n))
-        cmd = cmd.replace('[[path]]', 'asp/knights_tour.lp')
-        return cmd
+        cmd = cmd.replace('[[model_path]]', os.path.join(task.folder,'knights_tour.lp'))
+        cmd = cmd.replace('[[database_path]]', os.path.join(task.folder,'database.lp'))
+        fm.to_txt(cmd, loc.abs_path([task.folder, "command.sh"]))
+        return f"sh {os.path.join(task.folder, 'command.sh')}"

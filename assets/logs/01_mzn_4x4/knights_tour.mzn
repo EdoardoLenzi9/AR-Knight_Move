@@ -1,4 +1,4 @@
-% params ciao
+% params
 int: n;                                             
 int: max_time = n*n;   
 

@@ -1,0 +1,19 @@
+total 24
+drwxrwxrwx 1 root root 4096 Dec 21 08:59 .
+drwxrwxrwx 1 root root 4096 Dec 19 19:45 ..
+drwxrwxrwx 1 root root    0 Dec 18 20:15 asp
+drwxrwxrwx 1 root root    0 Dec 21 08:59 assets
+-rwxrwxrwx 1 root root   63 Dec 17 11:44 clingo.sh
+drwxrwxrwx 1 root root    0 Dec 16 22:42 documentation
+-rwxrwxrwx 1 root root  115 Dec 16 23:05 .env
+drwxrwxrwx 1 root root 4096 Dec 19 19:48 .git
+-rwxrwxrwx 1 root root   56 Dec 16 22:58 .gitignore
+drwxrwxrwx 1 root root 4096 Dec 17 11:15 knights_tour
+-rwxrwxrwx 1 root root  254 Dec 16 22:45 knights_tour.py
+drwxrwxrwx 1 root root    0 Dec 18 20:15 minizinc
+-rwxrwxrwx 1 root root  750 Dec 16 23:42 minizinc.sh
+-rwxrwxrwx 1 root root  499 Dec 16 22:40 readme.md
+-rwxrwxrwx 1 root root   33 Dec 16 22:51 requirements.txt
+drwxrwxrwx 1 root root    0 Dec 17 10:52 tests
+-rwxrwxrwx 1 root root  337 Dec 16 22:56 tests.py
+drwxrwxrwx 1 root root    0 Dec 16 23:40 .vscode

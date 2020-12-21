@@ -43,6 +43,9 @@ CLINGO_MODEL = "knights_tour.lp"
 CLINGO_DATABASE = "database.lp"
 MINIZINC_MODEL = "knights_tour.mzn"
 MINIZINC_DATABASE = "database.dzn"
+CLINGO_CMD = 'clingo.sh'
+MINIZINC_CMD = 'minizinc.sh'
+
 
 RUNS_PATH = abs_path([ASSETS, RUNS])
 LOGS_PATH = abs_path([ASSETS, LOGS])
@@ -50,8 +53,5 @@ CLINGO_MODEL_PATH = abs_path([ASP, CLINGO_MODEL])
 CLINGO_DATABASE_PATH = abs_path([ASP, CLINGO_DATABASE])
 MINIZINC_MODEL_PATH = abs_path([MINIZINC, MINIZINC_MODEL])
 MINIZINC_DATABASE_PATH = abs_path([MINIZINC, MINIZINC_DATABASE])
-
-
-# Commands Localizations
-
-CLINGO_CMD = '''clingo [[path]] -c n=[[n]] --time-limit=300'''
+CLINGO_CMD_PATH = abs_path([CLINGO_CMD])
+MINIZINC_CMD_PATH = abs_path([MINIZINC_CMD])
