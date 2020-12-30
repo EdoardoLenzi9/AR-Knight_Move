@@ -40,6 +40,7 @@ class ModelBuilder(object):
         fm.to_txt(model, os.path.join(task.folder, loc.MINIZINC_MODEL))
 
         database = f"""n = {task.n};
+k = {task.k};
 initial_occ = array2d(CELL_DOMAIN, CELL_DOMAIN, ["""
         for x in range(1, task.n+1):
             for y in range(1, task.n+1):

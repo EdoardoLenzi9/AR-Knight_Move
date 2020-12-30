@@ -20,6 +20,7 @@ from knights_tour.services.command_builder import CommandBuilder
 from knights_tour.services.model_builder import ModelBuilder
 from knights_tour.services.output_parser import OutputParser
 
+from tqdm import tqdm
 from os import path
 import subprocess
 import random
@@ -61,11 +62,17 @@ class CliHandler(object):
 
 
     def generate_handler(self, json_filename):
+
         clingo_params = [{ "varchoice": "varchoice"}, 
-                         {"...": "..." }]
-        minizinc_params = [{ "solver": "gecode"}, 
-                           {"allsolutions": "--all-solutions" }, 
-                           {"timeout": "--solver-time-limit 300000" }]
+                         { "...":        "..." }]
+        
+        minizinc_params = [{ "solver":          "gecode"}, 
+                           { "allsolutions":    "" }, 
+                           #{ "allsolutions":    "--all-solutions" },
+                           { "mzn2fzn":         "" }, 
+                           #{ "mzn2fzn":         "-c" }, 
+                           { "timeout":         "--solver-time-limit 300000" }]
+        
         tasks = []
         for n in [8, 10, 12, 14, 16]:
             for i in range(0,20):
@@ -98,7 +105,8 @@ class CliHandler(object):
 
     def run_handler(self, json_filename):
         json = fm.from_json(loc.abs_path([loc.RUNS_PATH, json_filename]))
-        for t in json:
+        solutions = []
+        for t in tqdm(json):
             knight1 = Pos(t["knight1"]["x"], t["knight1"]["y"])
             knight2 = Pos(t["knight2"]["x"], t["knight2"]["y"])
             params = {}
@@ -117,7 +125,14 @@ class CliHandler(object):
                          knight2,
                          occ,
                          params )
-            self.task_handler(task)
+            sol = self.task_handler(task)
+            #print(sol)
+            solutions.append(sol)
+        solutions.sort(key=lambda x: x.time, reverse=False)
+        with open("log.log", 'w') as l:
+            for s in solutions:
+                print(s)
+                l.write(str(s))
 
 
     def task_handler(self, task: Task):
@@ -127,9 +142,9 @@ class CliHandler(object):
         command = CommandBuilder.build_command(task) 
         
         output = self.run_command(command)   
-        fm.to_txt(output, loc.abs_path([loc.LOGS_PATH, task.name+".log"]))
+        fm.to_txt(output, os.path.join(task.folder, task.name+".log"))
         solution = OutputParser.parse(task, output)
-        print(solution)
+        return solution
 
 
     def run_command(self, command: str):
@@ -145,6 +160,7 @@ class CliHandler(object):
                 for line in iter(process.stdout.readline, b''):
                     line = str(line, 'utf-8')
                     output += line
+                    # print(line)
             print("Task ended in: " + str(int(time.time()-start_time)) + " sec\n\n")
             process.kill()
         return output

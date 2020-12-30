@@ -11,12 +11,14 @@
 
 #if test "$#" -ne 2; then
 #	$MINIZINC 	--solver gecode                      	\
+#				\#-c									\ #FlatZinc generator
 #		      	-I $LIB                               	\
 #		      	--all-solutions                       	\
 #		      	--solver-time-limit 300000            	\
 #			  	$1 
 #else 
 #	$MINIZINC 	--solver gecode                      	\
+#				\#-c									\ #FlatZinc generator
 #		      	-I $LIB                               	\
 #		      	--all-solutions                       	\
 #		      	--solver-time-limit 300000            	\
@@ -36,14 +38,18 @@ LIB=$MZN_PATH"/share/minizinc/std"
 if test "$#" -ne 2; then
 	$MINIZINC 	--solver [[solver]]                    	\
 		      	-I $LIB                               	\
+				[[mzn2fzn]]								\
 		      	[[allsolutions]]						\
 		      	[[timeout]]				            	\
+				[[verbose]]								\
 			  	$1 
 else 
 	$MINIZINC 	--solver [[solver]]                    	\
 		      	-I $LIB                               	\
+				[[mzn2fzn]]								\
 		      	[[allsolutions]]						\
 		      	[[timeout]]				            	\
+				[[verbose]]								\
 			  	$1 										\
 				-d $2
 fi

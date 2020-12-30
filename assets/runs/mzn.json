@@ -35,15 +35,14 @@
             }
         ],
         "params": [
-            {
-                "solver": "gecode"
-            },
-            {
-                "allsolutions": "--all-solutions"
-            },
-            {
-                "timeout": "--solver-time-limit 300000"
-            }
+            { "solver": "gecode" },
+            { "allsolutions": "--all-solutions" },
+            { "timeout": "--solver-time-limit 300000" },
+            { "mzn2fzn": "" },
+            { "verbose": "-v" },
+            { "varchoice": "smallest" },
+            { "constrainchoice": "indomain_reverse_split" },
+            { "strategy": "complete" }
         ]
     }
 ]
