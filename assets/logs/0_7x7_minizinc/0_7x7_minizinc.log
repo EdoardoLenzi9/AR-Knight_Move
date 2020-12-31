@@ -509,25 +509,427 @@ processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_all_different
 processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_all_different_int_reif.mzn'
 processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_all_different_int.mzn'
 processing data file '/home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/database.dzn'
- done parsing (0.08 s)
+ done parsing (0.10 s)
 Flattening ...
 	CompilePass: Flatten with '/home/eddy/App/MiniZincIDE/share/minizinc/gecode/' library ...
-MIP domains ... done (0.20 s)
-Optimizing ... done (0.21 s)
-Converting to old FlatZinc ... done (0.22 s)
- done (0.22 s)
- done (0.30 s), max stack depth 16
-Maximum memory 13 Mbytes.
+MIP domains ... done (0.40 s)
+Optimizing ... done (0.40 s)
+
+  WARNING: 
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:46.40:
+  Variable `k' shadows variable with the same name in line 2.6
+
+  WARNING: 
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:57.44:
+  Variable `k' shadows variable with the same name in line 2.6
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 1
+    with t = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = -1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 1
+    with t = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = -1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 1
+    with t = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 1
+    with t = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 1
+    with t = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = 2
+    with l = -1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 1
+    with t = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = 2
+    with l = -1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 2
+    with t = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = -1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 2
+    with t = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = -1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 2
+    with t = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 2
+    with t = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 2
+    with t = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = 2
+    with l = -1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 2
+    with t = 2
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = -1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 2
+    with t = 2
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = -1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 2
+    with t = 2
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 2
+    with t = 2
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 2
+    with t = 2
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = 2
+    with l = -1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 2
+    with t = 3
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = -1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 2
+    with t = 3
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = -1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_7x7_minizinc/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: Further warnings have been suppressed.
+Converting to old FlatZinc ... done (0.42 s)
+ done (0.42 s)
+ done (0.52 s), max stack depth 19
+Maximum memory 14 Mbytes.
       % SOLVING PHASE
 FZN solver plugin, compiled  Nov 24 2020  23:00:32
-Using FZN solver /home/eddy/App/MiniZincIDE/bin/fzn-gecode for solving, parameters: -t 300000 
-Warning, replacing unsupported annotation indomain_middle with indomain_median
-[[2,35,26,1,6,38,30
-29,46,4,34,28,45,8
-39,24,27,33,23,32,47
-37,31,40,3,36,10,41
-22,5,11,25,15,21,14
-9,44,42,18,12,43,17
-48,20,7,13,19,16,0]]
+Using FZN solver /home/eddy/App/MiniZincIDE/bin/fzn-gecode for solving, parameters: -p 4 -t 300000 
+Warning, ignored search annotation: impact
+Warning, ignored search annotation: outdomain_max
+Warning, replacing unsupported annotation indomain_interval with indomain_split
+Warning, replacing unsupported annotation indomain_interval with indomain_split
+[[2,8,18,1,14,37,11
+20,27,12,6,9,34,41
+10,4,7,16,39,13,35
+25,22,29,3,32,43,36
+26,5,30,40,19,33,15
+48,23,24,31,44,38,45
+49,28,42,21,47,17,46]]
 ----------
-   Done (overall time 300.37 s).
+==========
+   Done (overall time 7.57 s).

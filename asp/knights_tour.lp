@@ -5,7 +5,6 @@ time(1..n**2).
 
 
 % constraints
-
 candidateStep(T,X + 2,Y + 1) :- position(T,X,Y), time(T), pos(X + 2), pos(Y + 1).  
 candidateStep(T,X + 2,Y - 1) :- position(T,X,Y), time(T), pos(X + 2), pos(Y - 1).  
 candidateStep(T,X + 1,Y + 2) :- position(T,X,Y), time(T), pos(X + 1), pos(Y + 2).  

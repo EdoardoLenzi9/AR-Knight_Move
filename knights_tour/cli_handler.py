@@ -106,30 +106,36 @@ class CliHandler(object):
     def run_handler(self, json_filename):
         json = fm.from_json(loc.abs_path([loc.RUNS_PATH, json_filename]))
         solutions = []
-        for t in tqdm(json):
-            knight1 = Pos(t["knight1"]["x"], t["knight1"]["y"])
-            knight2 = Pos(t["knight2"]["x"], t["knight2"]["y"])
-            params = {}
-            for p in t['params']:
-                for k in p.keys():
-                    params[k] = p[k]
+        with open(f"{json_filename}.log", 'w') as l:
+            for t in tqdm(json):
+                try:
+                    knight1 = Pos(t["knight1"]["x"], t["knight1"]["y"])
+                    knight2 = Pos(t["knight2"]["x"], t["knight2"]["y"])
+                    params = {}
+                    for p in t['params']:
+                        for k in p.keys():
+                            params[k] = p[k]
 
-            occ = []
-            for o in t["occ"]:
-                occ.append(Pos(o["x"], o["y"]))
-            task = Task( t["name"],
-                         t["target"],
-                         t["n"],
-                         t["k"],
-                         knight1,
-                         knight2,
-                         occ,
-                         params )
-            sol = self.task_handler(task)
-            #print(sol)
-            solutions.append(sol)
-        solutions.sort(key=lambda x: x.time, reverse=False)
-        with open("log.log", 'w') as l:
+                    occ = []
+                    for o in t["occ"]:
+                        occ.append(Pos(o["x"], o["y"]))
+                    task = Task( t["name"],
+                                t["target"],
+                                t["n"],
+                                t["k"],
+                                knight1,
+                                knight2,
+                                occ,
+                                params )
+                    sol = self.task_handler(task)
+                    #print(sol)
+                    solutions.append(sol)
+                    l.write(str(sol))
+                except: 
+                    print(f"fail")
+        #solutions.sort(key=lambda x: x.time, reverse=False)
+        solutions.sort(key=lambda x: x.pcoverage, reverse=False)
+        with open(f"{json_filename}.sort.log", 'w') as l:
             for s in solutions:
                 print(s)
                 l.write(str(s))

@@ -17,6 +17,7 @@ class Solution(object):
         self.k = k
         self.coverage = coverage
         self.time = time 
+        self.pcoverage = (self.coverage*100)/ self.n**2
            
 
     def __eq__(self, other):
@@ -35,4 +36,4 @@ class Solution(object):
                 str_checkerboard += "|" + " "*(3-len(v)) + v 
             str_checkerboard += "|\n"
         str_checkerboard += "-"*((self.n * 4) + 1) + "\n"
-        return f'''\n{str_checkerboard}\n| n = {self.n} | k = {self.k} | coverage = {self.coverage}, {(self.coverage*100)/ self.n**2}%\n Time {self.time}\n Name {self.name}\n\n'''
+        return f'''\n{str_checkerboard}\n| n = {self.n} | k = {self.k} | coverage = {self.coverage}, {self.pcoverage}%\n Time {self.time}\n Name {self.name}\n\n'''

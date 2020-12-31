@@ -509,86 +509,438 @@ processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_all_different
 processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_all_different_int_reif.mzn'
 processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_all_different_int.mzn'
 processing data file '/home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/database.dzn'
- done parsing (0.09 s)
+ done parsing (0.08 s)
 Flattening ...
 	CompilePass: Flatten with '/home/eddy/App/MiniZincIDE/share/minizinc/gecode/' library ...
-MIP domains ... done (0.14 s)
-Optimizing ... done (0.15 s)
-Converting to old FlatZinc ... done (0.15 s)
- done (0.15 s)
- done (0.24 s), max stack depth 16
-Maximum memory 9 Mbytes.
+MIP domains ... done (0.16 s)
+Optimizing ... done (0.16 s)
+
+  WARNING: 
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:46.40:
+  Variable `k' shadows variable with the same name in line 2.6
+
+  WARNING: 
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:57.44:
+  Variable `k' shadows variable with the same name in line 2.6
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 1
+    with t = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = -1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 1
+    with t = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = -1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 1
+    with t = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 1
+    with t = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 1
+    with t = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = 2
+    with l = -1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 1
+    with t = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = 2
+    with l = -1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 2
+    with t = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = -1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 2
+    with t = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = -1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 2
+    with t = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 2
+    with t = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 2
+    with t = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = 2
+    with l = -1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 2
+    with t = 2
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = -1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 2
+    with t = 2
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = -1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 2
+    with t = 2
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 2
+    with t = 2
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 2
+    with t = 2
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = 2
+    with l = -1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 2
+    with t = 3
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = -1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 2
+    with t = 3
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = -1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_6x6_minizincanti_first_failindomain_randomcomplete/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: Further warnings have been suppressed.
+Converting to old FlatZinc ... done (0.91 s)
+ done (0.91 s)
+ done (0.99 s), max stack depth 19
+Maximum memory 10 Mbytes.
       % SOLVING PHASE
 FZN solver plugin, compiled  Nov 24 2020  23:00:32
 Using FZN solver /home/eddy/App/MiniZincIDE/bin/fzn-gecode for solving, parameters: -a -t 20000 
-[[2,19,11,1,35,30
-5,23,28,24,18,33
-13,9,15,25,8,10
-14,7,22,3,17,29
-0,4,6,36,21,32
-27,16,26,34,12,20]]
+Warning, replacing unsupported annotation indomain_middle with indomain_median
+Warning, ignored search annotation: outdomain_max
+[[2,25,19,1,22,29
+21,0,28,27,17,0
+30,4,23,24,31,20
+8,26,12,3,9,15
+14,32,6,13,18,5
+0,10,16,7,0,11]]
 ----------
-[[2,19,11,1,35,30
-5,23,28,24,18,33
-13,4,36,25,32,26
-34,7,8,3,0,6
-22,17,31,10,21,29
-15,9,16,20,12,0]]
+[[2,25,19,1,22,29
+21,26,12,27,17,0
+14,4,23,24,31,20
+28,10,16,3,9,15
+6,5,11,32,18,33
+0,30,8,7,13,34]]
 ----------
-[[2,19,11,1,35,30
-27,31,17,21,9,7
-34,4,20,29,18,23
-13,16,0,3,36,24
-15,26,6,28,32,0
-22,14,33,8,5,0]]
+[[2,25,19,1,22,16
+21,26,20,14,17,35
+27,4,23,24,18,12
+28,7,8,3,33,15
+6,29,11,32,10,0
+9,30,5,31,13,34]]
 ----------
-[[2,19,11,1,35,30
-0,31,17,21,9,23
-36,4,12,13,34,28
-25,10,26,3,24,27
-6,29,18,32,22,5
-0,15,8,7,33,20]]
-----------
-[[2,19,11,1,35,30
-33,31,17,21,9,14
-36,4,12,0,34,28
-25,10,26,3,24,7
-16,27,6,20,23,0
-8,32,13,18,5,15]]
-----------
-[[2,19,11,1,35,30
-26,31,17,21,9,29
-36,4,7,34,18,14
-27,10,13,3,16,25
-28,5,6,15,24,32
-8,0,12,23,33,20]]
-----------
-[[2,19,11,1,35,30
-13,31,17,21,9,28
-36,4,7,34,32,15
-27,33,12,3,16,25
-6,5,0,29,10,20
-26,22,8,14,24,18]]
-----------
-[[2,19,11,1,35,30
-13,31,17,21,9,24
-36,4,7,34,32,18
-27,15,12,3,16,25
-6,5,20,23,10,28
-0,26,8,14,22,33]]
-----------
-[[2,19,11,1,35,30
-13,31,17,21,9,24
-36,4,7,34,32,20
-27,15,12,3,16,25
-6,5,33,23,10,28
-22,0,8,14,0,18]]
-----------
-[[2,28,14,1,18,36
-24,27,21,33,12,31
-23,4,10,16,11,20
-8,0,17,3,29,34
-19,5,6,13,35,9
-25,15,26,7,22,30]]
-----------
-   Done (overall time 20.29 s).
+==========
+   Done (overall time 1.29 s).

@@ -42,6 +42,7 @@ if test "$#" -ne 2; then
 		      	[[allsolutions]]						\
 		      	[[timeout]]				            	\
 				[[verbose]]								\
+				-p 6									\
 			  	$1 
 else 
 	$MINIZINC 	--solver [[solver]]                    	\
@@ -50,6 +51,7 @@ else
 		      	[[allsolutions]]						\
 		      	[[timeout]]				            	\
 				[[verbose]]								\
+				-p 6									\
 			  	$1 										\
 				-d $2
 fi

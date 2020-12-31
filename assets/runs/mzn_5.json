@@ -24,8 +24,8 @@
             { "timeout": "--solver-time-limit 300000" },
             { "mzn2fzn": "" },
             { "verbose": "-v" },
-            { "varchoice": "smallest" },
-            { "constrainchoice": "indomain_reverse_split" },
+            { "varchoice": "impact" },
+            { "constrainchoice": "indomain_random" },
             { "strategy": "complete" }
         ]
     }

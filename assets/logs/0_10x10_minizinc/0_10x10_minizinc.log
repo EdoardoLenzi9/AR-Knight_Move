@@ -1,0 +1,959 @@
+MiniZinc to FlatZinc converter, version 2.5.3, build 220798393
+Copyright (C) 2014-2020 Monash University, NICTA, Data61
+Parsing file(s) /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn', '/home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/database.dzn' ...
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/stdlib.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/stdlib/stdlib_internal.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/stdlib/stdlib_random.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/stdlib/stdlib_enum.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/stdlib/stdlib_debug.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/stdlib/stdlib_reflect.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/stdlib/stdlib_string.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/stdlib/stdlib_coercion.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/stdlib/stdlib_sort.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/stdlib/stdlib_array.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/stdlib/stdlib_ite.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/stdlib/stdlib_set.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/stdlib/stdlib_logic.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/stdlib/stdlib_math.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/stdlib/stdlib_compare.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/stdlib/stdlib_opt.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/stdlib/stdlib_ann.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/stdlib/stdlib_language.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/flatzinc_builtins.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/solver_redefinitions.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_if_then_else_partiality.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_if_then_else_var_set.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_if_then_else_set.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_if_then_else_var_opt_float.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_if_then_else_var_float.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_if_then_else_opt_float.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_if_then_else_float.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_if_then_else_var_opt_bool.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_if_then_else_var_bool.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_if_then_else_opt_bool.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_if_then_else_bool.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_if_then_else_var_opt_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_if_then_else_var_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_if_then_else_opt_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_if_then_else_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/count_fn.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/count.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/count_lt.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_lt_par_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_lt_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_lt_par.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_lt.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/count_gt.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_gt_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_gt_par_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_gt.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_gt_par.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/count_neq.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_neq_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_neq_par_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_neq.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_neq_par.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/count_leq.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_leq_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_leq_par_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_leq.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_leq_par.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/count_geq.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_geq_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_geq_par_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_geq.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_geq_par.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/count_eq.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_eq_par_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_count_eq_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_eq_par.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_count_eq.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//redefinitions-2.5.2.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/redefinitions-2.3.3.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/redefinitions-2.2.1.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/redefinitions-2.1.1.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/redefinitions-2.1.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//redefinitions-2.0.2.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//redefinitions-2.0.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//redefinitions.mzn'
+processing file '/home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_alldifferent_except.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/global_cardinality_low_up.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_global_cardinality_low_up_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_global_cardinality_low_up.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/globals.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/weighted_spanning_tree.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dwst_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dwst.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_wst_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_wst.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/value_precede_chain.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/value_precede_chain_set.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_value_precede_chain_set_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_value_precede_chain_set.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/value_precede_chain_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_value_precede_chain_int_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_value_precede_chain_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/value_precede.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/value_precede_set.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_value_precede_set_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_value_precede_set.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_value_precede_int_opt.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/value_precede_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_value_precede_int_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_value_precede_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/tree.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dtree_enum_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dtree_enum.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dtree_int_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dtree_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_tree_enum_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_tree_enum.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_tree_int_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_tree_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/table.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_table_int_opt.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/table_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_table_int_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_table_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/table_bool.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_table_bool_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_table_bool.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/symmetric_all_different.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_symmetric_all_different_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_symmetric_all_different.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/analyse_all_different.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/sum_set.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_sum_set_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_sum_set.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/sum_pred.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_sum_pred_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_sum_pred.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/subgraph.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_subgraph_enum_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_subgraph_enum.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_subgraph_int_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_subgraph_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/subcircuit.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_subcircuit_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/alldifferent.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_subcircuit.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/strict_lex2.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_strict_lex2_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_strict_lex2.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/strictly_increasing.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_strictly_increasing_bool_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_strictly_increasing_bool.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_strictly_increasing_int_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_strictly_increasing_int_opt.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_strictly_increasing_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/strictly_decreasing.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_strictly_decreasing_bool_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_strictly_decreasing_bool.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_strictly_decreasing_int_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_strictly_decreasing_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/steiner.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dsteiner_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dsteiner.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_steiner_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_steiner.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/span.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_span_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_span.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/sort_fn.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/sort.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_sort_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_sort.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/sliding_sum.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_sliding_sum_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_sliding_sum.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/seq_precede_chain.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_seq_precede_chain_set_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_seq_precede_chain_set.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_seq_precede_chain_int_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_seq_precede_chain_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/roots_fn.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/roots.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_roots_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_roots.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/regular_regexp.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_regular_regexp.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/regular_set.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_regular_set_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_regular_set.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/regular_nfa.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_regular_nfa_set_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_regular_nfa_set.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_regular_nfa_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_regular_nfa.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/regular.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_regular_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_regular.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/reachable.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dreachable_enum_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dreachable_enum.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dreachable_int_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dreachable_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_reachable_enum_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_reachable_enum.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_reachable_int_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_reachable_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/range_fn.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/range.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_range_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_range.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/piecewise_linear.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_piecewise_linear_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_piecewise_linear.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/partition_set.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_partition_set_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_partition_set.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/nvalue_fn.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/nvalue.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_nvalue_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_nvalue.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/neural_net.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_neural_net_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_neural_net.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/network_flow.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_network_flow_cost_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_network_flow_cost.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_network_flow_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_network_flow.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/minimum.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/member.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/set_member.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_set_member_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_set_member.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/member_set.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_member_set_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_member_set.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/member_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_member_int_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_member_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/member_float.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_member_float_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_member_float.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/member_bool.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_member_bool_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_member_bool.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/mdd_nondet.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_mdd_nondet_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_mdd_nondet.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/mdd.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_mdd_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_mdd.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/maximum.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/link_set_to_booleans.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_link_set_to_booleans_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_link_set_to_booleans.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/lex2.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_lex2_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_lex2.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/lex_less.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/lex_less_set.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_lex_less_set_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_lex_less_set.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/lex_less_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_lex_less_int_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_lex_less_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/lex_less_float.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_lex_less_float_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_lex_less_float.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/lex_less_bool.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_lex_less_bool_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_lex_less_bool.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/lex_lesseq.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/lex_lesseq_set.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_lex_lesseq_set_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_lex_lesseq_set.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/lex_lesseq_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_lex_lesseq_int_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_lex_lesseq_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/lex_lesseq_float.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_lex_lesseq_float_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_lex_lesseq_float.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/lex_lesseq_bool.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_lex_lesseq_bool_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_lex_lesseq_bool.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/lex_greatereq.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/lex_greater.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/knapsack.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_knapsack_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_knapsack.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/inverse_set.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_inverse_set_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_inverse_set.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/inverse_in_range.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_inverse_in_range_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_inverse_in_range.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/inverse_fn.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/inverse.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_inverse_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_inverse.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/int_set_channel.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_int_set_channel_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_int_set_channel.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/increasing.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/increasing_set.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_increasing_set_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_increasing_set.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/increasing_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_increasing_int_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_increasing_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/increasing_float.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_increasing_float_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_increasing_float.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/increasing_bool.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_increasing_bool_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_increasing_bool.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/global_cardinality_low_up_closed.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_global_cardinality_low_up_closed_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_global_cardinality_low_up_closed.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/global_cardinality_closed_fn.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/global_cardinality_closed.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_global_cardinality_closed_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_global_cardinality_closed.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/global_cardinality_fn.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/global_cardinality.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_global_cardinality_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_global_cardinality.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/geost.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_geost_nonoverlap_k_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_geost_nonoverlap_k.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_geost_smallest_bb_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_geost_smallest_bb.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_geost_bb_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_geost_bb.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_geost_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_geost.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/exactly.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/exactly_set.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_exactly_set_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_exactly_set.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/exactly_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_exactly_int_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_exactly_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/exactly.mzn.deprecated.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/exactly.mzn.deprecated.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/exactly.mzn.deprecated.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std//exactly.mzn.deprecated.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/exactly.mzn.deprecated.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/exactly.mzn.deprecated.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/element.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/element_set.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/element_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/element_float.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/element_bool.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/distribute_fn.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/distribute.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_distribute_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_distribute.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/disjunctive_strict_opt.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_disjunctive_strict_opt_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_disjunctive_strict_opt.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/disjunctive_opt.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_disjunctive_opt_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_disjunctive_opt.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/disjunctive_strict.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_disjunctive_strict_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_disjunctive_strict.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_cumulative.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/disjunctive.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_disjunctive_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_disjunctive.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/disjoint.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_disjoint_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_disjoint.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/diffn_nonstrict_k.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_diffn_nonstrict_k_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_diffn_nonstrict_k.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/diffn_k.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_diffn_k_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_diffn_k.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/diffn_nonstrict.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_diffn_nonstrict_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_diffn_nonstrict.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/diffn.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_diffn_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_diffn.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/decreasing.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/decreasing_set.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_decreasing_set.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/decreasing_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_decreasing_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/decreasing_float.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_decreasing_float.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/decreasing_bool.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_decreasing_bool_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_decreasing_bool.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/dag.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dag_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dag.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/cumulative_opt.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_cumulative_opt_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_cumulative_opt.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/cumulative.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_cumulative_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/cost_regular.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_cost_regular_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_cost_regular.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/cost_mdd.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_cost_mdd_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_cost_mdd.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/connected.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dconnected_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dconnected.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_connected_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_connected.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/circuit.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_circuit_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_circuit.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/bounded_path.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_bounded_dpath_enum_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/path.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dpath_enum_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dpath_enum.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dpath_int_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dpath_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_path_enum_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_path_enum.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_path_int_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_path_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_bounded_dpath_enum.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_bounded_dpath_int_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_bounded_dpath_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_bounded_path_enum_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_bounded_path_enum.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_bounded_path_int_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_bounded_path_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/bin_packing_load_fn.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_bin_packing_load.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/bin_packing_load.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_bin_packing_load_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/bin_packing_capa.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_bin_packing_capa_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_bin_packing_capa.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/bin_packing.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_bin_packing_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_bin_packing.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/at_most1.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_at_most1_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_at_most1.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/at_most.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_at_most_set_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_at_most_set.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_at_most_int_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_at_most_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/at_most.mzn.deprecated.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/at_most.mzn.deprecated.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/at_most.mzn.deprecated.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std//at_most.mzn.deprecated.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/at_most.mzn.deprecated.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/at_most.mzn.deprecated.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/at_least.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_at_least_set_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_at_least_set.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_at_least_int_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_at_least_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/at_least.mzn.deprecated.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/at_least.mzn.deprecated.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/at_least.mzn.deprecated.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std//at_least.mzn.deprecated.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/at_least.mzn.deprecated.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/at_least.mzn.deprecated.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/arg_max.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/arg_max_float.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_arg_max_float.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/arg_max_bool.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_arg_max_bool.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/arg_max_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_arg_max_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/arg_min.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/arg_min_float.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_arg_min_float.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/arg_min_bool.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_arg_min_bool.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/arg_min_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_arg_min_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/arg_sort.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/arg_sort_float.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_arg_sort_float_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_arg_sort_float.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/arg_sort_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_arg_sort_int_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_arg_sort_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/among_fn.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_among.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/among.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_among_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/alternative.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_alternative_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_alternative.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/all_equal.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_all_equal_set_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_all_equal_set.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_all_equal_int_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_all_equal_int.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/all_disjoint.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_all_disjoint_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_all_disjoint.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/alldifferent_except_0.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_alldifferent_except_0_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/alldifferent_except.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_alldifferent_except_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_alldifferent_except_0.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/all_different.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_all_different_set_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_all_different_set.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_all_different_int_reif.mzn'
+processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_all_different_int.mzn'
+processing data file '/home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/database.dzn'
+ done parsing (0.09 s)
+Flattening ...
+	CompilePass: Flatten with '/home/eddy/App/MiniZincIDE/share/minizinc/gecode/' library ...
+MIP domains ... done (1.25 s)
+Optimizing ... done (1.30 s)
+
+  WARNING: 
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:46.40:
+  Variable `k' shadows variable with the same name in line 2.6
+
+  WARNING: 
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:57.44:
+  Variable `k' shadows variable with the same name in line 2.6
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 1
+    with t = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = -1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 1
+    with t = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = -1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 1
+    with t = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 1
+    with t = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 1
+    with t = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = 2
+    with l = -1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 1
+    with t = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = 2
+    with l = -1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 2
+    with t = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = -1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 2
+    with t = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = -1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 2
+    with t = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 2
+    with t = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 2
+    with t = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = 2
+    with l = -1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 2
+    with t = 2
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = -1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 2
+    with t = 2
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = -1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 2
+    with t = 2
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 2
+    with t = 2
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = 1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 2
+    with t = 2
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = 2
+    with l = -1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 2
+    with t = 3
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = -1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 2
+    with t = 3
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = -1
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/0_10x10_minizinc/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: Further warnings have been suppressed.
+Converting to old FlatZinc ... done (1.38 s)
+ done (1.38 s)
+ done (1.47 s), max stack depth 19
+Maximum memory 43 Mbytes.
+      % SOLVING PHASE
+FZN solver plugin, compiled  Nov 24 2020  23:00:32
+Using FZN solver /home/eddy/App/MiniZincIDE/bin/fzn-gecode for solving, parameters: -a -t 300000 
+Warning, replacing unsupported annotation indomain_middle with indomain_median
+Warning, ignored search annotation: outdomain_max
+Warning, replacing unsupported annotation indomain_interval with indomain_split
+Warning, replacing unsupported annotation indomain_interval with indomain_split
+[[2,60,51,1,6,68,47,0,78,0
+57,0,4,62,49,43,76,82,72,0
+58,69,59,53,66,8,70,45,86,80
+73,55,64,3,41,50,84,74,9,46
+67,56,71,61,10,5,42,48,14,88
+0,75,65,83,52,39,12,7,44,11
+0,0,54,37,63,85,0,40,90,16
+77,35,29,34,81,38,24,87,13,19
+31,32,79,25,22,28,15,21,18,89
+0,27,33,30,36,23,20,26,17,0]]
+----------
+[[2,60,51,1,6,68,47,13,78,0
+57,0,4,62,49,43,76,82,72,15
+58,69,59,53,66,8,70,45,11,80
+73,55,64,3,41,50,84,74,17,46
+67,56,71,61,10,5,42,48,86,9
+0,75,65,83,52,39,12,7,44,19
+26,32,54,37,63,85,0,40,14,88
+77,35,28,34,81,38,29,87,21,0
+30,24,79,0,31,20,91,25,90,16
+0,0,33,22,36,27,92,18,89,23]]
+----------
+[[2,60,51,1,6,68,47,88,78,0
+57,0,4,62,49,43,76,82,72,90
+58,69,59,53,66,8,70,45,86,80
+73,55,64,3,41,50,84,74,92,46
+67,56,71,61,10,5,42,48,14,93
+0,75,65,83,52,39,12,18,44,94
+27,32,54,37,63,85,7,40,91,16
+77,35,29,34,81,38,20,87,17,11
+30,25,79,33,26,21,15,9,22,89
+0,31,28,23,36,0,24,19,13,0]]
+----------
+   Done (overall time 301.75 s).

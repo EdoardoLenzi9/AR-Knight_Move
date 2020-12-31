@@ -1,6 +1,6 @@
-n = 6
-output=f"grid_{n}.json"
-
+n = 7
+output=f"subgrid_{n}.json"
+'''
 constrainchoice = [ "indomain", 
                     "indomain_interval",
                     "indomain_max",
@@ -26,6 +26,14 @@ varchoice = ["input_order",
              "max_regret",
              "smallest",
              "largest"]
+'''
+
+constrainchoice = [ "indomain_median",
+                    "indomain_middle" ]
+
+varchoice = ["input_order", 
+             "impact",
+             "smallest"]
 
 strategy = ["complete"]
 
@@ -52,7 +60,7 @@ template = '''
         "params": [
             { "solver": "gecode" },
             { "allsolutions": "--all-solutions" },
-            { "timeout": "--solver-time-limit 20000" },
+            { "timeout": "--solver-time-limit 300000" },
             { "mzn2fzn": "" },
             { "verbose": "-v" },
             { "varchoice": "[[varchoice]]" },
