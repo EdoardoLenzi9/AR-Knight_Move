@@ -30,7 +30,7 @@ constraint forall(i, j in 1..n)(
 
 % turn constraint, one move per turn 
 include "globals.mzn";
-include "fzn_alldifferent_except.mzn";
+% include "fzn_alldifferent_except.mzn";
 
 predicate alldifferent_except_01(array[$X] of var int: vs) = 
    fzn_alldifferent_except(array1d(vs),{0, 1});

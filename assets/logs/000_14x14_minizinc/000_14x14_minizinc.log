@@ -1,942 +1,1077 @@
 MiniZinc to FlatZinc converter, version 2.5.3, build 220798393
 Copyright (C) 2014-2020 Monash University, NICTA, Data61
-Parsing file(s) /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn', '/home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/database.dzn' ...
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/stdlib.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/stdlib/stdlib_internal.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/stdlib/stdlib_random.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/stdlib/stdlib_enum.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/stdlib/stdlib_debug.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/stdlib/stdlib_reflect.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/stdlib/stdlib_string.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/stdlib/stdlib_coercion.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/stdlib/stdlib_sort.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/stdlib/stdlib_array.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/stdlib/stdlib_ite.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/stdlib/stdlib_set.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/stdlib/stdlib_logic.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/stdlib/stdlib_math.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/stdlib/stdlib_compare.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/stdlib/stdlib_opt.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/stdlib/stdlib_ann.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/stdlib/stdlib_language.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/flatzinc_builtins.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/solver_redefinitions.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_if_then_else_partiality.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_if_then_else_var_set.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_if_then_else_set.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_if_then_else_var_opt_float.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_if_then_else_var_float.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_if_then_else_opt_float.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_if_then_else_float.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_if_then_else_var_opt_bool.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_if_then_else_var_bool.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_if_then_else_opt_bool.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_if_then_else_bool.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_if_then_else_var_opt_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_if_then_else_var_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_if_then_else_opt_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_if_then_else_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/count_fn.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/count.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/count_lt.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_lt_par_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_lt_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_lt_par.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_lt.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/count_gt.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_gt_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_gt_par_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_gt.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_gt_par.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/count_neq.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_neq_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_neq_par_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_neq.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_neq_par.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/count_leq.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_leq_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_leq_par_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_leq.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_leq_par.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/count_geq.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_geq_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_geq_par_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_geq.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_geq_par.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/count_eq.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_eq_par_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_count_eq_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_count_eq_par.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_count_eq.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//redefinitions-2.5.2.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/redefinitions-2.3.3.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/redefinitions-2.2.1.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/redefinitions-2.1.1.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/redefinitions-2.1.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//redefinitions-2.0.2.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//redefinitions-2.0.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//redefinitions.mzn'
-processing file '/home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_alldifferent_except.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/global_cardinality_low_up.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_global_cardinality_low_up_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_global_cardinality_low_up.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/globals.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/weighted_spanning_tree.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dwst_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dwst.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_wst_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_wst.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/value_precede_chain.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/value_precede_chain_set.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_value_precede_chain_set_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_value_precede_chain_set.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/value_precede_chain_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_value_precede_chain_int_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_value_precede_chain_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/value_precede.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/value_precede_set.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_value_precede_set_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_value_precede_set.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_value_precede_int_opt.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/value_precede_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_value_precede_int_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_value_precede_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/tree.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dtree_enum_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dtree_enum.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dtree_int_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dtree_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_tree_enum_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_tree_enum.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_tree_int_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_tree_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/table.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_table_int_opt.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/table_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_table_int_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_table_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/table_bool.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_table_bool_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_table_bool.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/symmetric_all_different.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_symmetric_all_different_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_symmetric_all_different.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/analyse_all_different.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/sum_set.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_sum_set_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_sum_set.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/sum_pred.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_sum_pred_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_sum_pred.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/subgraph.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_subgraph_enum_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_subgraph_enum.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_subgraph_int_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_subgraph_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/subcircuit.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_subcircuit_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/alldifferent.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_subcircuit.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/strict_lex2.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_strict_lex2_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_strict_lex2.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/strictly_increasing.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_strictly_increasing_bool_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_strictly_increasing_bool.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_strictly_increasing_int_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_strictly_increasing_int_opt.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_strictly_increasing_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/strictly_decreasing.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_strictly_decreasing_bool_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_strictly_decreasing_bool.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_strictly_decreasing_int_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_strictly_decreasing_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/steiner.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dsteiner_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dsteiner.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_steiner_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_steiner.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/span.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_span_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_span.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/sort_fn.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/sort.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_sort_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_sort.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/sliding_sum.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_sliding_sum_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_sliding_sum.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/seq_precede_chain.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_seq_precede_chain_set_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_seq_precede_chain_set.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_seq_precede_chain_int_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_seq_precede_chain_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/roots_fn.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/roots.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_roots_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_roots.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/regular_regexp.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_regular_regexp.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/regular_set.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_regular_set_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_regular_set.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/regular_nfa.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_regular_nfa_set_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_regular_nfa_set.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_regular_nfa_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_regular_nfa.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/regular.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_regular_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_regular.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/reachable.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dreachable_enum_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dreachable_enum.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dreachable_int_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dreachable_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_reachable_enum_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_reachable_enum.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_reachable_int_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_reachable_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/range_fn.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/range.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_range_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_range.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/piecewise_linear.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_piecewise_linear_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_piecewise_linear.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/partition_set.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_partition_set_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_partition_set.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/nvalue_fn.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/nvalue.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_nvalue_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_nvalue.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/neural_net.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_neural_net_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_neural_net.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/network_flow.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_network_flow_cost_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_network_flow_cost.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_network_flow_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_network_flow.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/minimum.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/member.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/set_member.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_set_member_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_set_member.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/member_set.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_member_set_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_member_set.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/member_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_member_int_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_member_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/member_float.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_member_float_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_member_float.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/member_bool.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_member_bool_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_member_bool.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/mdd_nondet.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_mdd_nondet_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_mdd_nondet.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/mdd.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_mdd_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_mdd.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/maximum.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/link_set_to_booleans.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_link_set_to_booleans_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_link_set_to_booleans.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/lex2.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_lex2_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_lex2.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/lex_less.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/lex_less_set.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_lex_less_set_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_lex_less_set.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/lex_less_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_lex_less_int_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_lex_less_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/lex_less_float.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_lex_less_float_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_lex_less_float.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/lex_less_bool.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_lex_less_bool_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_lex_less_bool.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/lex_lesseq.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/lex_lesseq_set.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_lex_lesseq_set_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_lex_lesseq_set.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/lex_lesseq_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_lex_lesseq_int_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_lex_lesseq_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/lex_lesseq_float.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_lex_lesseq_float_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_lex_lesseq_float.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/lex_lesseq_bool.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_lex_lesseq_bool_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_lex_lesseq_bool.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/lex_greatereq.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/lex_greater.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/knapsack.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_knapsack_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_knapsack.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/inverse_set.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_inverse_set_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_inverse_set.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/inverse_in_range.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_inverse_in_range_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_inverse_in_range.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/inverse_fn.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/inverse.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_inverse_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_inverse.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/int_set_channel.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_int_set_channel_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_int_set_channel.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/increasing.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/increasing_set.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_increasing_set_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_increasing_set.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/increasing_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_increasing_int_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_increasing_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/increasing_float.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_increasing_float_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_increasing_float.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/increasing_bool.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_increasing_bool_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_increasing_bool.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/global_cardinality_low_up_closed.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_global_cardinality_low_up_closed_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_global_cardinality_low_up_closed.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/global_cardinality_closed_fn.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/global_cardinality_closed.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_global_cardinality_closed_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_global_cardinality_closed.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/global_cardinality_fn.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/global_cardinality.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_global_cardinality_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_global_cardinality.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/geost.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_geost_nonoverlap_k_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_geost_nonoverlap_k.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_geost_smallest_bb_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_geost_smallest_bb.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_geost_bb_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_geost_bb.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_geost_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_geost.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/exactly.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/exactly_set.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_exactly_set_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_exactly_set.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/exactly_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_exactly_int_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_exactly_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/exactly.mzn.deprecated.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/exactly.mzn.deprecated.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/exactly.mzn.deprecated.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std//exactly.mzn.deprecated.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/exactly.mzn.deprecated.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/exactly.mzn.deprecated.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/element.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/element_set.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/element_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/element_float.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/element_bool.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/distribute_fn.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/distribute.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_distribute_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_distribute.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/disjunctive_strict_opt.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_disjunctive_strict_opt_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_disjunctive_strict_opt.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/disjunctive_opt.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_disjunctive_opt_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_disjunctive_opt.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/disjunctive_strict.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_disjunctive_strict_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_disjunctive_strict.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_cumulative.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/disjunctive.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_disjunctive_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_disjunctive.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/disjoint.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_disjoint_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_disjoint.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/diffn_nonstrict_k.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_diffn_nonstrict_k_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_diffn_nonstrict_k.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/diffn_k.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_diffn_k_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_diffn_k.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/diffn_nonstrict.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_diffn_nonstrict_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_diffn_nonstrict.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/diffn.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_diffn_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_diffn.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/decreasing.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/decreasing_set.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_decreasing_set.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/decreasing_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_decreasing_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/decreasing_float.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_decreasing_float.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/decreasing_bool.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_decreasing_bool_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_decreasing_bool.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/dag.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dag_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dag.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/cumulative_opt.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_cumulative_opt_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_cumulative_opt.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/cumulative.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_cumulative_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/cost_regular.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_cost_regular_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_cost_regular.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/cost_mdd.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_cost_mdd_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_cost_mdd.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/connected.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dconnected_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dconnected.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_connected_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_connected.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/circuit.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_circuit_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_circuit.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/bounded_path.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_bounded_dpath_enum_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/path.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dpath_enum_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dpath_enum.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dpath_int_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_dpath_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_path_enum_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_path_enum.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_path_int_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_path_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_bounded_dpath_enum.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_bounded_dpath_int_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_bounded_dpath_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_bounded_path_enum_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_bounded_path_enum.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_bounded_path_int_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_bounded_path_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/bin_packing_load_fn.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_bin_packing_load.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/bin_packing_load.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_bin_packing_load_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/bin_packing_capa.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_bin_packing_capa_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_bin_packing_capa.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/bin_packing.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_bin_packing_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_bin_packing.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/at_most1.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_at_most1_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_at_most1.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/at_most.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_at_most_set_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_at_most_set.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_at_most_int_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_at_most_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/at_most.mzn.deprecated.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/at_most.mzn.deprecated.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/at_most.mzn.deprecated.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std//at_most.mzn.deprecated.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/at_most.mzn.deprecated.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/at_most.mzn.deprecated.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/at_least.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_at_least_set_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_at_least_set.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_at_least_int_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_at_least_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/at_least.mzn.deprecated.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/at_least.mzn.deprecated.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/at_least.mzn.deprecated.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std//at_least.mzn.deprecated.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/at_least.mzn.deprecated.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/at_least.mzn.deprecated.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/arg_max.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/arg_max_float.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_arg_max_float.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/arg_max_bool.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_arg_max_bool.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/arg_max_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_arg_max_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/arg_min.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/arg_min_float.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_arg_min_float.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/arg_min_bool.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_arg_min_bool.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/arg_min_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_arg_min_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/arg_sort.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/arg_sort_float.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_arg_sort_float_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_arg_sort_float.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/arg_sort_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_arg_sort_int_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_arg_sort_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/among_fn.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_among.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/among.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_among_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/alternative.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_alternative_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_alternative.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/all_equal.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_all_equal_set_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_all_equal_set.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_all_equal_int_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_all_equal_int.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/all_disjoint.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_all_disjoint_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_all_disjoint.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/alldifferent_except_0.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_alldifferent_except_0_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/alldifferent_except.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_alldifferent_except_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_alldifferent_except_0.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/all_different.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_all_different_set_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_all_different_set.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/std/fzn_all_different_int_reif.mzn'
-processing file '/home/eddy/App/MiniZincIDE/share/minizinc/gecode//fzn_all_different_int.mzn'
-processing data file '/home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/database.dzn'
- done parsing (0.10 s)
+Parsing file(s) /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn', '/mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/database.dzn' ...
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/stdlib.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/stdlib/stdlib_internal.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/stdlib/stdlib_random.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/stdlib/stdlib_enum.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/stdlib/stdlib_debug.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/stdlib/stdlib_reflect.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/stdlib/stdlib_string.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/stdlib/stdlib_coercion.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/stdlib/stdlib_sort.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/stdlib/stdlib_array.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/stdlib/stdlib_ite.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/stdlib/stdlib_set.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/stdlib/stdlib_logic.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/stdlib/stdlib_math.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/stdlib/stdlib_compare.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/stdlib/stdlib_opt.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/stdlib/stdlib_ann.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/stdlib/stdlib_language.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/flatzinc_builtins.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/solver_redefinitions.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_if_then_else_partiality.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_if_then_else_var_set.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_if_then_else_set.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_if_then_else_var_opt_float.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_if_then_else_var_float.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_if_then_else_opt_float.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_if_then_else_float.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_if_then_else_var_opt_bool.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_if_then_else_var_bool.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_if_then_else_opt_bool.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_if_then_else_bool.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_if_then_else_var_opt_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_if_then_else_var_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_if_then_else_opt_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_if_then_else_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/count_fn.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/count.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/count_lt.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_count_lt_par_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_count_lt_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_count_lt_par.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_count_lt.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/count_gt.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_count_gt_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_count_gt_par_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_count_gt.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_count_gt_par.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/count_neq.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_count_neq_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_count_neq_par_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_count_neq.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_count_neq_par.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/count_leq.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_count_leq_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_count_leq_par_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_count_leq.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_count_leq_par.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/count_geq.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_count_geq_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_count_geq_par_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_count_geq.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_count_geq_par.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/count_eq.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_count_eq_par_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_count_eq_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_count_eq_par.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_count_eq.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//redefinitions-2.5.2.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/redefinitions-2.3.3.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/redefinitions-2.2.1.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/redefinitions-2.1.1.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/redefinitions-2.1.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//redefinitions-2.0.2.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//redefinitions-2.0.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//redefinitions.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_alldifferent_except.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/global_cardinality_low_up.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_global_cardinality_low_up_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_global_cardinality_low_up.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/globals.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/weighted_spanning_tree.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_dwst_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_dwst.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_wst_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_wst.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/value_precede_chain.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/value_precede_chain_set.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_value_precede_chain_set_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_value_precede_chain_set.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/value_precede_chain_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_value_precede_chain_int_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_value_precede_chain_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/value_precede.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/value_precede_set.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_value_precede_set_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_value_precede_set.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_value_precede_int_opt.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/value_precede_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_value_precede_int_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_value_precede_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/tree.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_dtree_enum_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_dtree_enum.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_dtree_int_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_dtree_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_tree_enum_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_tree_enum.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_tree_int_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_tree_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/table.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_table_int_opt.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/table_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_table_int_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_table_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/table_bool.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_table_bool_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_table_bool.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/symmetric_all_different.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_symmetric_all_different_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_symmetric_all_different.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/analyse_all_different.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/sum_set.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_sum_set_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_sum_set.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/sum_pred.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_sum_pred_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_sum_pred.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/subgraph.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_subgraph_enum_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_subgraph_enum.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_subgraph_int_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_subgraph_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/subcircuit.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_subcircuit_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/alldifferent.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_subcircuit.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/strict_lex2.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_strict_lex2_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_strict_lex2.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/strictly_increasing.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_strictly_increasing_bool_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_strictly_increasing_bool.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_strictly_increasing_int_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_strictly_increasing_int_opt.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_strictly_increasing_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/strictly_decreasing.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_strictly_decreasing_bool_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_strictly_decreasing_bool.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_strictly_decreasing_int_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_strictly_decreasing_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/steiner.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_dsteiner_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_dsteiner.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_steiner_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_steiner.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/span.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_span_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_span.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/sort_fn.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/sort.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_sort_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_sort.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/sliding_sum.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_sliding_sum_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_sliding_sum.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/seq_precede_chain.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_seq_precede_chain_set_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_seq_precede_chain_set.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_seq_precede_chain_int_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_seq_precede_chain_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/roots_fn.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/roots.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_roots_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_roots.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/regular_regexp.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_regular_regexp.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/regular_set.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_regular_set_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_regular_set.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/regular_nfa.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_regular_nfa_set_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_regular_nfa_set.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_regular_nfa_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_regular_nfa.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/regular.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_regular_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_regular.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/reachable.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_dreachable_enum_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_dreachable_enum.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_dreachable_int_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_dreachable_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_reachable_enum_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_reachable_enum.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_reachable_int_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_reachable_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/range_fn.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/range.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_range_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_range.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/piecewise_linear.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_piecewise_linear_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_piecewise_linear.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/partition_set.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_partition_set_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_partition_set.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/nvalue_fn.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/nvalue.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_nvalue_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_nvalue.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/neural_net.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_neural_net_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_neural_net.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/network_flow.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_network_flow_cost_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_network_flow_cost.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_network_flow_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_network_flow.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/minimum.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/member.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/set_member.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_set_member_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_set_member.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/member_set.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_member_set_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_member_set.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/member_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_member_int_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_member_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/member_float.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_member_float_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_member_float.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/member_bool.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_member_bool_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_member_bool.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/mdd_nondet.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_mdd_nondet_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_mdd_nondet.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/mdd.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_mdd_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_mdd.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/maximum.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/link_set_to_booleans.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_link_set_to_booleans_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_link_set_to_booleans.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/lex2.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_lex2_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_lex2.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/lex_less.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/lex_less_set.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_lex_less_set_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_lex_less_set.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/lex_less_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_lex_less_int_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_lex_less_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/lex_less_float.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_lex_less_float_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_lex_less_float.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/lex_less_bool.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_lex_less_bool_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_lex_less_bool.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/lex_lesseq.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/lex_lesseq_set.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_lex_lesseq_set_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_lex_lesseq_set.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/lex_lesseq_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_lex_lesseq_int_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_lex_lesseq_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/lex_lesseq_float.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_lex_lesseq_float_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_lex_lesseq_float.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/lex_lesseq_bool.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_lex_lesseq_bool_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_lex_lesseq_bool.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/lex_greatereq.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/lex_greater.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/knapsack.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_knapsack_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_knapsack.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/inverse_set.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_inverse_set_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_inverse_set.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/inverse_in_range.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_inverse_in_range_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_inverse_in_range.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/inverse_fn.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/inverse.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_inverse_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_inverse.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/int_set_channel.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_int_set_channel_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_int_set_channel.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/increasing.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/increasing_set.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_increasing_set_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_increasing_set.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/increasing_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_increasing_int_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_increasing_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/increasing_float.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_increasing_float_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_increasing_float.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/increasing_bool.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_increasing_bool_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_increasing_bool.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/global_cardinality_low_up_closed.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_global_cardinality_low_up_closed_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_global_cardinality_low_up_closed.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/global_cardinality_closed_fn.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/global_cardinality_closed.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_global_cardinality_closed_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_global_cardinality_closed.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/global_cardinality_fn.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/global_cardinality.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_global_cardinality_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_global_cardinality.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/geost.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_geost_nonoverlap_k_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_geost_nonoverlap_k.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_geost_smallest_bb_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_geost_smallest_bb.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_geost_bb_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_geost_bb.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_geost_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_geost.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/exactly.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/exactly_set.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_exactly_set_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_exactly_set.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/exactly_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_exactly_int_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_exactly_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/exactly.mzn.deprecated.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/exactly.mzn.deprecated.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/exactly.mzn.deprecated.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std//exactly.mzn.deprecated.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/exactly.mzn.deprecated.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/exactly.mzn.deprecated.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/element.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/element_set.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/element_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/element_float.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/element_bool.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/distribute_fn.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/distribute.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_distribute_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_distribute.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/disjunctive_strict_opt.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_disjunctive_strict_opt_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_disjunctive_strict_opt.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/disjunctive_opt.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_disjunctive_opt_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_disjunctive_opt.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/disjunctive_strict.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_disjunctive_strict_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_disjunctive_strict.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_cumulative.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/disjunctive.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_disjunctive_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_disjunctive.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/disjoint.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_disjoint_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_disjoint.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/diffn_nonstrict_k.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_diffn_nonstrict_k_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_diffn_nonstrict_k.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/diffn_k.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_diffn_k_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_diffn_k.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/diffn_nonstrict.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_diffn_nonstrict_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_diffn_nonstrict.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/diffn.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_diffn_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_diffn.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/decreasing.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/decreasing_set.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_decreasing_set.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/decreasing_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_decreasing_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/decreasing_float.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_decreasing_float.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/decreasing_bool.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_decreasing_bool_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_decreasing_bool.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/dag.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_dag_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_dag.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/cumulative_opt.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_cumulative_opt_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_cumulative_opt.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/cumulative.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_cumulative_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/cost_regular.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_cost_regular_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_cost_regular.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/cost_mdd.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_cost_mdd_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_cost_mdd.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/connected.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_dconnected_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_dconnected.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_connected_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_connected.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/circuit.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_circuit_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_circuit.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/bounded_path.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_bounded_dpath_enum_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/path.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_dpath_enum_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_dpath_enum.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_dpath_int_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_dpath_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_path_enum_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_path_enum.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_path_int_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_path_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_bounded_dpath_enum.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_bounded_dpath_int_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_bounded_dpath_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_bounded_path_enum_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_bounded_path_enum.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_bounded_path_int_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_bounded_path_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/bin_packing_load_fn.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_bin_packing_load.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/bin_packing_load.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_bin_packing_load_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/bin_packing_capa.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_bin_packing_capa_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_bin_packing_capa.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/bin_packing.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_bin_packing_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_bin_packing.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/at_most1.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_at_most1_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_at_most1.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/at_most.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_at_most_set_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_at_most_set.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_at_most_int_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_at_most_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/at_most.mzn.deprecated.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/at_most.mzn.deprecated.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/at_most.mzn.deprecated.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std//at_most.mzn.deprecated.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/at_most.mzn.deprecated.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/at_most.mzn.deprecated.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/at_least.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_at_least_set_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_at_least_set.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_at_least_int_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_at_least_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/at_least.mzn.deprecated.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/at_least.mzn.deprecated.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/at_least.mzn.deprecated.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std//at_least.mzn.deprecated.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/at_least.mzn.deprecated.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/at_least.mzn.deprecated.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/arg_max.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/arg_max_float.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_arg_max_float.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/arg_max_bool.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_arg_max_bool.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/arg_max_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_arg_max_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/arg_min.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/arg_min_float.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_arg_min_float.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/arg_min_bool.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_arg_min_bool.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/arg_min_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_arg_min_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/arg_sort.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/arg_sort_float.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_arg_sort_float_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_arg_sort_float.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/arg_sort_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_arg_sort_int_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_arg_sort_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/among_fn.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_among.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/among.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_among_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/alternative.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_alternative_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_alternative.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/all_equal.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_all_equal_set_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_all_equal_set.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_all_equal_int_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_all_equal_int.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/all_disjoint.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_all_disjoint_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_all_disjoint.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/alldifferent_except_0.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_alldifferent_except_0_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/alldifferent_except.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_alldifferent_except_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_alldifferent_except_0.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/all_different.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_all_different_set_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_all_different_set.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/std/fzn_all_different_int_reif.mzn'
+processing file '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode//fzn_all_different_int.mzn'
+processing data file '/mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/database.dzn'
+ done parsing (0.04 s)
 Flattening ...
-	CompilePass: Flatten with '/home/eddy/App/MiniZincIDE/share/minizinc/gecode/' library ...
-MIP domains ... done (7.28 s)
-Optimizing ... done (7.70 s)
+	CompilePass: Flatten with '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode/' library ...
+MIP domains ... done (5.31 s)
+Optimizing ... done (5.53 s)
 
   WARNING: 
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46.40:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46.40:
   Variable `k' shadows variable with the same name in line 2.6
 
   WARNING: 
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:57.44:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:57.44:
   Variable `k' shadows variable with the same name in line 2.6
 
   WARNING: undefined result becomes false in Boolean context
   (array access out of bounds)
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:43:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:43:
   in call 'forall'
   in array comprehension expression
     with i = 1
     with j = 1
     with t = 1
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:44:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:44:
   in binary '->' operator expression
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46:
   in binary '\/' operator expression
   in call 'exists'
   in array comprehension expression
     with k = -2
     with l = -1
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:47:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:47:
   in binary '\/' operator expression
   in binary '=' operator expression
   in array access
 
   WARNING: undefined result becomes false in Boolean context
   (array access out of bounds)
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:43:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:43:
   in call 'forall'
   in array comprehension expression
     with i = 1
     with j = 1
     with t = 1
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:44:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:44:
   in binary '->' operator expression
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46:
   in binary '\/' operator expression
   in call 'exists'
   in array comprehension expression
     with k = -2
     with l = -1
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:47:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:47:
   in binary '\/' operator expression
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:48:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:48:
   in binary '=' operator expression
   in array access
 
   WARNING: undefined result becomes false in Boolean context
   (array access out of bounds)
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:43:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:43:
   in call 'forall'
   in array comprehension expression
     with i = 1
     with j = 1
     with t = 1
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:44:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:44:
   in binary '->' operator expression
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46:
   in binary '\/' operator expression
   in call 'exists'
   in array comprehension expression
     with k = -2
     with l = 1
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:47:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:47:
   in binary '\/' operator expression
   in binary '=' operator expression
   in array access
 
   WARNING: undefined result becomes false in Boolean context
   (array access out of bounds)
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:43:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:43:
   in call 'forall'
   in array comprehension expression
     with i = 1
     with j = 1
     with t = 1
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:44:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:44:
   in binary '->' operator expression
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46:
   in binary '\/' operator expression
   in call 'exists'
   in array comprehension expression
     with k = -2
     with l = 1
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:47:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:47:
   in binary '\/' operator expression
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:48:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:48:
   in binary '=' operator expression
   in array access
 
   WARNING: undefined result becomes false in Boolean context
   (array access out of bounds)
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:43:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:43:
   in call 'forall'
   in array comprehension expression
     with i = 1
     with j = 1
     with t = 1
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:44:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:44:
   in binary '->' operator expression
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46:
   in binary '\/' operator expression
   in call 'exists'
   in array comprehension expression
     with k = 2
     with l = -1
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:47:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:47:
   in binary '\/' operator expression
   in binary '=' operator expression
   in array access
 
   WARNING: undefined result becomes false in Boolean context
   (array access out of bounds)
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:43:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:43:
   in call 'forall'
   in array comprehension expression
     with i = 1
     with j = 1
     with t = 1
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:44:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:44:
   in binary '->' operator expression
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46:
   in binary '\/' operator expression
   in call 'exists'
   in array comprehension expression
     with k = 2
     with l = -1
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:47:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:47:
   in binary '\/' operator expression
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:48:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:48:
   in binary '=' operator expression
   in array access
 
   WARNING: undefined result becomes false in Boolean context
   (array access out of bounds)
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:43:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:43:
   in call 'forall'
   in array comprehension expression
     with i = 1
     with j = 2
     with t = 1
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:44:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:44:
   in binary '->' operator expression
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46:
   in binary '\/' operator expression
   in call 'exists'
   in array comprehension expression
     with k = -2
     with l = -1
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:47:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:47:
   in binary '\/' operator expression
   in binary '=' operator expression
   in array access
 
   WARNING: undefined result becomes false in Boolean context
   (array access out of bounds)
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:43:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:43:
   in call 'forall'
   in array comprehension expression
     with i = 1
     with j = 2
     with t = 1
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:44:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:44:
   in binary '->' operator expression
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46:
   in binary '\/' operator expression
   in call 'exists'
   in array comprehension expression
     with k = -2
     with l = -1
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:47:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:47:
   in binary '\/' operator expression
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:48:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:48:
   in binary '=' operator expression
   in array access
 
   WARNING: undefined result becomes false in Boolean context
   (array access out of bounds)
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:43:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:43:
   in call 'forall'
   in array comprehension expression
     with i = 1
     with j = 2
     with t = 1
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:44:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:44:
   in binary '->' operator expression
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46:
   in binary '\/' operator expression
   in call 'exists'
   in array comprehension expression
     with k = -2
     with l = 1
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:47:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:47:
   in binary '\/' operator expression
   in binary '=' operator expression
   in array access
 
   WARNING: undefined result becomes false in Boolean context
   (array access out of bounds)
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:43:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:43:
   in call 'forall'
   in array comprehension expression
     with i = 1
     with j = 2
     with t = 1
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:44:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:44:
   in binary '->' operator expression
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46:
   in binary '\/' operator expression
   in call 'exists'
   in array comprehension expression
     with k = -2
     with l = 1
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:47:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:47:
   in binary '\/' operator expression
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:48:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:48:
   in binary '=' operator expression
   in array access
 
   WARNING: undefined result becomes false in Boolean context
   (array access out of bounds)
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:43:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:43:
   in call 'forall'
   in array comprehension expression
     with i = 1
     with j = 2
     with t = 1
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:44:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:44:
   in binary '->' operator expression
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46:
   in binary '\/' operator expression
   in call 'exists'
   in array comprehension expression
     with k = 2
     with l = -1
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:47:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:47:
   in binary '\/' operator expression
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:48:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:48:
   in binary '=' operator expression
   in array access
 
   WARNING: undefined result becomes false in Boolean context
   (array access out of bounds)
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:43:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:43:
   in call 'forall'
   in array comprehension expression
     with i = 1
     with j = 2
     with t = 2
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:44:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:44:
   in binary '->' operator expression
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46:
   in binary '\/' operator expression
   in call 'exists'
   in array comprehension expression
     with k = -2
     with l = -1
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:47:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:47:
   in binary '\/' operator expression
   in binary '=' operator expression
   in array access
 
   WARNING: undefined result becomes false in Boolean context
   (array access out of bounds)
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:43:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:43:
   in call 'forall'
   in array comprehension expression
     with i = 1
     with j = 2
     with t = 2
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:44:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:44:
   in binary '->' operator expression
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46:
   in binary '\/' operator expression
   in call 'exists'
   in array comprehension expression
     with k = -2
     with l = -1
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:47:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:47:
   in binary '\/' operator expression
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:48:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:48:
   in binary '=' operator expression
   in array access
 
   WARNING: undefined result becomes false in Boolean context
   (array access out of bounds)
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:43:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:43:
   in call 'forall'
   in array comprehension expression
     with i = 1
     with j = 2
     with t = 2
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:44:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:44:
   in binary '->' operator expression
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46:
   in binary '\/' operator expression
   in call 'exists'
   in array comprehension expression
     with k = -2
     with l = 1
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:47:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:47:
   in binary '\/' operator expression
   in binary '=' operator expression
   in array access
 
   WARNING: undefined result becomes false in Boolean context
   (array access out of bounds)
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:43:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:43:
   in call 'forall'
   in array comprehension expression
     with i = 1
     with j = 2
     with t = 2
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:44:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:44:
   in binary '->' operator expression
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46:
   in binary '\/' operator expression
   in call 'exists'
   in array comprehension expression
     with k = -2
     with l = 1
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:47:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:47:
   in binary '\/' operator expression
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:48:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:48:
   in binary '=' operator expression
   in array access
 
   WARNING: undefined result becomes false in Boolean context
   (array access out of bounds)
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:43:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:43:
   in call 'forall'
   in array comprehension expression
     with i = 1
     with j = 2
     with t = 2
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:44:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:44:
   in binary '->' operator expression
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46:
   in binary '\/' operator expression
   in call 'exists'
   in array comprehension expression
     with k = 2
     with l = -1
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:47:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:47:
   in binary '\/' operator expression
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:48:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:48:
   in binary '=' operator expression
   in array access
 
   WARNING: undefined result becomes false in Boolean context
   (array access out of bounds)
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:43:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:43:
   in call 'forall'
   in array comprehension expression
     with i = 1
     with j = 2
     with t = 3
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:44:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:44:
   in binary '->' operator expression
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46:
   in binary '\/' operator expression
   in call 'exists'
   in array comprehension expression
     with k = -2
     with l = -1
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:47:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:47:
   in binary '\/' operator expression
   in binary '=' operator expression
   in array access
 
   WARNING: undefined result becomes false in Boolean context
   (array access out of bounds)
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:43:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:43:
   in call 'forall'
   in array comprehension expression
     with i = 1
     with j = 2
     with t = 3
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:44:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:44:
   in binary '->' operator expression
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:46:
   in binary '\/' operator expression
   in call 'exists'
   in array comprehension expression
     with k = -2
     with l = -1
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:47:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:47:
   in binary '\/' operator expression
-  /home/eddy/Note/Automated_Reasoning/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:48:
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/000_14x14_minizinc/knights_tour.mzn:48:
   in binary '=' operator expression
   in array access
 
   WARNING: Further warnings have been suppressed.
-Converting to old FlatZinc ... done (8.42 s)
- done (8.42 s)
- done (8.52 s), max stack depth 19
+Converting to old FlatZinc ... done (5.92 s)
+ done (5.92 s)
+ done (5.96 s), max stack depth 19
 Maximum memory 145 Mbytes.
       % SOLVING PHASE
 FZN solver plugin, compiled  Nov 24 2020  23:00:32
-Using FZN solver /home/eddy/App/MiniZincIDE/bin/fzn-gecode for solving, parameters: -a -p 4 -t 300000 
+Using FZN solver /mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/bin/fzn-gecode for solving, parameters: -a -p 8 -t 300000 
 Warning, replacing unsupported annotation indomain_middle with indomain_median
 Warning, ignored search annotation: impact
 Warning, ignored search annotation: outdomain_max
 Warning, replacing unsupported annotation indomain_interval with indomain_split
 Warning, replacing unsupported annotation indomain_interval with indomain_split
-[[2,100,111,1,126,129,134,133,138,137,123,141,142,145
-112,118,124,102,113,107,128,127,132,150,140,147,97,151
-98,4,114,109,122,48,131,136,135,125,139,121,143,144
-116,110,120,3,104,115,105,130,152,119,148,99,149,95
-43,96,6,108,50,49,46,117,54,101,55,40,146,36
-37,31,41,47,5,106,52,103,53,42,61,34,93,0
-94,45,35,8,62,68,51,44,30,56,67,57,38,0
-33,39,29,23,24,7,60,66,69,59,32,63,73,91
-27,92,22,17,10,64,70,28,58,65,71,77,78,0
-20,15,25,0,21,26,9,0,72,79,80,0,89,75
-90,0,19,13,0,12,0,0,82,0,83,76,0,0
-0,18,88,14,0,11,84,0,81,74,0,0,0,87
-0,0,0,0,86,0,0,0,0,0,0,85,0,0
-0,0,16,0,0,0,0,0,0,0,0,0,0,0]]
+[[2,100,111,1,127,128,134,133,138,137,122,141,142,116
+117,103,4,102,113,131,125,130,124,146,140,118,153,143
+98,109,115,129,6,132,126,136,135,120,139,144,114,152
+101,119,105,3,104,123,89,86,108,46,148,154,145,151
+107,96,47,121,51,8,106,44,50,40,147,112,150,36
+45,99,53,58,5,87,84,91,88,110,48,38,149,31
+55,60,94,49,10,56,90,85,42,52,27,33,34,24
+65,43,97,7,92,82,93,54,25,35,32,26,29,19
+62,57,67,41,95,12,70,37,83,28,23,17,22,0
+69,63,73,66,9,39,80,14,72,15,20,30,21,0
+59,64,0,0,75,68,11,76,18,81,0,0,0,0
+0,71,61,0,0,78,16,79,13,74,0,0,0,0
+0,0,0,0,0,77,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0]]
 ----------
-   Done (overall time 310.38 s).
+[[2,100,114,1,115,129,130,133,134,137,138,141,142,145
+116,111,120,119,112,123,124,127,128,150,97,147,93,0
+102,4,98,113,122,117,131,132,135,136,139,140,143,144
+109,118,104,3,121,110,125,126,152,99,148,95,149,91
+90,96,6,105,106,84,154,101,155,85,151,89,146,81
+76,107,92,86,5,103,108,158,161,162,157,83,73,67
+94,88,78,8,82,156,163,164,66,153,87,69,79,172
+169,74,56,7,165,10,68,62,160,159,168,75,65,71
+54,28,167,80,70,60,31,36,166,64,35,40,170,77
+0,171,72,58,9,27,12,23,33,38,41,19,45,63
+26,52,30,20,14,48,34,29,15,21,42,37,0,0
+0,18,24,50,32,11,25,46,53,39,17,43,61,47
+0,0,0,16,22,0,0,13,0,44,51,57,0,0
+0,0,0,0,0,0,0,0,0,55,0,0,49,59]]
+----------
+[[2,100,114,1,115,129,130,133,134,137,138,141,142,145
+116,111,120,119,112,123,124,127,128,150,97,147,93,0
+102,4,98,113,122,117,131,132,135,136,139,140,143,144
+109,118,104,3,121,110,125,126,152,99,148,95,149,91
+90,96,6,105,106,84,154,101,155,85,151,89,146,81
+76,107,92,86,5,103,108,158,161,162,157,83,73,67
+94,88,78,8,82,156,163,164,66,153,87,69,79,173
+53,74,56,7,168,10,68,62,160,159,169,75,65,71
+54,9,55,80,70,60,166,165,27,64,63,28,171,77
+37,51,72,58,57,170,12,23,61,167,24,18,32,38
+11,52,39,45,19,48,59,29,14,25,30,36,26,20
+41,35,49,50,172,31,21,46,0,0,16,22,40,34
+0,13,43,33,47,17,0,0,0,0,42,0,0,0
+0,0,0,15,0,174,0,0,44,0,0,0,0,0]]
+----------
+[[2,100,114,1,115,129,130,133,134,137,138,141,142,145
+116,111,120,119,112,123,124,127,128,150,97,147,93,0
+102,4,98,113,122,117,131,132,135,136,139,140,143,144
+109,118,104,3,121,110,125,126,152,99,148,95,149,91
+90,96,6,105,106,84,154,101,155,85,151,89,146,81
+76,107,92,86,5,103,108,158,161,162,157,83,73,67
+94,88,78,8,82,156,163,164,66,153,87,69,79,176
+56,74,53,7,165,10,68,171,160,159,168,75,65,71
+51,48,58,80,70,173,167,64,166,61,39,36,174,77
+0,54,72,55,9,62,12,59,169,170,24,63,37,34
+50,49,46,60,19,57,175,20,14,41,38,172,26,0
+0,0,52,47,44,11,17,43,40,22,16,35,32,31
+0,0,0,21,15,45,42,25,18,0,0,29,0,28
+0,0,0,0,0,23,13,0,0,27,0,30,33,0]]
+----------
+[[2,100,114,1,115,129,130,133,134,137,138,141,142,145
+116,111,120,119,112,123,124,127,128,150,97,147,93,0
+102,4,98,113,122,117,131,132,135,136,139,140,143,144
+109,118,104,3,121,110,125,126,152,99,148,95,149,91
+90,96,6,105,106,84,154,101,155,85,151,89,146,81
+76,107,92,86,5,103,108,158,161,162,157,83,73,67
+94,88,78,8,82,156,163,164,66,153,87,69,79,177
+56,74,53,7,165,10,68,170,160,159,173,75,65,71
+51,29,54,80,70,9,167,64,166,36,30,24,175,77
+52,58,72,55,12,62,168,38,172,171,20,63,32,26
+31,49,27,60,35,57,11,169,18,61,34,28,22,0
+25,50,33,43,17,14,40,59,13,174,0,0,0,0
+0,41,47,21,46,37,15,16,42,0,0,176,0,0
+0,23,48,39,45,19,44,0,0,0,0,0,0,178]]
+----------
+[[2,100,114,1,115,129,130,133,134,137,138,141,142,145
+116,111,120,119,112,123,124,127,128,150,97,147,93,0
+102,4,98,113,122,117,131,132,135,136,139,140,143,144
+109,118,104,3,121,110,125,126,152,99,148,95,149,91
+90,96,6,105,106,84,154,101,155,85,151,89,146,81
+76,107,92,86,5,103,108,158,161,162,157,83,73,67
+94,88,78,8,82,156,163,164,66,153,87,69,79,180
+56,74,53,7,165,10,68,170,160,159,173,75,65,71
+51,48,54,80,70,9,167,64,166,172,63,37,178,77
+52,58,72,55,12,62,168,26,29,171,176,175,0,35
+46,49,50,60,11,57,27,169,174,61,39,33,0,177
+36,0,13,47,40,14,28,59,24,31,21,0,0,0
+0,44,38,32,15,45,18,25,19,41,22,0,179,0
+0,34,0,42,16,30,17,43,20,23,0,0,0,0]]
+----------
+[[2,100,114,1,115,129,130,133,134,137,138,141,142,145
+116,111,120,119,112,123,124,127,128,150,97,147,93,0
+102,4,98,113,122,117,131,132,135,136,139,140,143,144
+109,118,104,3,121,110,125,126,152,99,148,95,149,91
+90,96,6,105,106,84,154,101,155,85,151,89,146,81
+76,107,92,86,5,103,108,158,161,162,157,83,73,67
+94,88,78,8,82,156,163,164,66,153,87,69,79,181
+56,74,53,7,165,10,68,170,160,159,173,75,65,71
+51,48,54,80,70,9,167,64,166,172,63,176,179,77
+52,58,72,55,12,62,168,30,29,171,25,175,0,178
+46,49,50,60,11,57,31,169,23,61,174,24,0,177
+37,43,40,0,33,14,32,59,28,27,21,0,180,22
+47,44,35,41,38,13,0,16,34,17,26,20,0,0
+0,39,45,42,0,0,36,15,0,18,0,19,0,182]]
+----------
+[[2,100,114,1,115,129,130,133,134,137,138,141,142,145
+116,111,120,119,112,123,124,127,128,150,97,147,93,0
+102,4,98,113,122,117,131,132,135,136,139,140,143,144
+109,118,104,3,121,110,125,126,152,99,148,95,149,91
+90,96,6,105,106,84,154,101,155,85,151,89,146,81
+76,107,92,86,5,103,108,158,161,162,157,83,73,67
+94,88,78,8,82,156,163,164,66,153,87,69,79,184
+53,74,56,7,60,10,68,167,160,159,172,75,65,71
+54,9,55,80,70,165,166,64,174,169,63,173,182,77
+33,51,72,58,57,62,12,34,61,170,40,26,181,0
+11,52,31,37,27,21,59,168,38,176,171,180,175,24
+49,35,45,23,17,46,36,14,32,42,28,179,0,183
+43,13,50,29,39,25,19,44,18,0,178,0,22,177
+0,47,41,15,48,0,16,0,0,30,20,0,0,0]]
+----------
+[[2,100,114,1,115,129,130,133,134,137,138,141,142,145
+116,111,120,119,112,123,124,127,128,150,97,147,93,0
+102,4,98,113,122,117,131,132,135,136,139,140,143,144
+109,118,104,3,121,110,125,126,152,99,148,95,149,91
+90,96,6,105,106,84,154,101,155,85,151,89,146,81
+76,107,92,86,5,103,108,158,161,162,157,83,73,67
+94,88,78,8,82,156,163,164,66,153,87,69,79,185
+53,74,56,7,60,10,68,167,160,159,172,75,65,71
+54,9,55,80,70,165,59,64,166,169,63,173,183,77
+36,51,72,58,57,62,12,35,61,170,29,174,20,175
+11,52,38,41,15,37,19,168,31,176,171,177,182,181
+49,34,13,46,40,43,33,14,21,27,180,18,0,22
+50,44,47,32,39,17,0,28,178,16,23,24,179,184
+0,0,48,42,45,30,0,0,25,26,0,186,0,0]]
+----------
+[[2,101,111,1,114,128,131,132,135,136,139,140,143,144
+113,118,117,122,109,102,112,126,129,150,145,146,149,187
+99,4,103,116,119,124,130,133,134,137,138,141,142,188
+68,115,120,3,100,107,104,110,152,127,148,147,185,151
+6,97,66,105,62,121,63,57,71,108,54,49,186,45
+76,70,5,98,65,59,69,106,125,154,73,43,153,183
+95,8,74,64,42,60,123,61,55,56,51,52,47,184
+72,78,40,7,96,67,44,58,156,75,41,79,181,155
+31,93,10,80,38,32,94,84,39,53,50,157,182,161
+12,22,33,34,9,82,37,46,92,158,77,163,81,179
+19,29,91,24,35,36,30,160,86,48,83,180,159,165
+20,14,21,11,89,26,0,90,85,170,164,171,177,178
+27,17,0,16,23,13,87,28,162,88,174,168,167,173
+0,18,25,15,0,0,0,0,172,166,169,175,176,0]]
+----------
+   Done (overall time 307.12 s).

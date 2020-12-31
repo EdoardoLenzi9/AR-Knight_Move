@@ -26,8 +26,8 @@
 #				-d $2
 #fi
 
-
-MZN_PATH='/home/eddy/App/MiniZincIDE'	#TODO replace with your local Minizinc installation folder
+MZN_PATH='/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64'	#TODO replace with your local Minizinc installation folder
+#MZN_PATH='/home/eddy/App/MiniZincIDE'	#TODO replace with your local Minizinc installation folder
 MINIZINC=$MZN_PATH"/bin/minizinc"
 export PATH=$PATH:$MZN_PATH"/bin"
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$MZN_PATH"/lib" 
@@ -51,7 +51,7 @@ else
 		      	--all-solutions						\
 		      	--solver-time-limit 300000				            	\
 				-v								\
-				-p 4									\
+				-p 8									\
 			  	$1 										\
 				-d $2
 fi

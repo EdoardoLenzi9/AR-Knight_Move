@@ -30,7 +30,7 @@ constraint forall(i, j in 1..n)(
 
 % turn constraint, one move per turn 
 include "globals.mzn";
-include "fzn_alldifferent_except.mzn";
+% include "fzn_alldifferent_except.mzn";
 
 predicate alldifferent_except_01(array[$X] of var int: vs) = 
    fzn_alldifferent_except(array1d(vs),{0, 1});
@@ -67,11 +67,11 @@ visited_cells = min(halting_time1, halting_time2);
 
 % search strategy
 solve :: seq_search([
-    int_search(occ, impact, indomain_middle, complete),
-    int_search([visited_cells], occurrence, outdomain_max, complete),
-    int_search([halting_time1], input_order, indomain_interval, complete),
-    int_search([halting_time1], input_order, indomain_interval, complete)]) 
-%    :: restart_linear(1000)
+    int_search(occ, impact, indomain_random),
+    int_search([visited_cells], occurrence, outdomain_max),
+    int_search([halting_time1], input_order, indomain_interval),
+    int_search([halting_time1], input_order, indomain_interval)]) 
+    :: restart_linear(1000)
 maximize visited_cells; 
 
 output  ["[["] ++ 

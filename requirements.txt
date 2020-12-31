@@ -2,3 +2,4 @@ numpy
 tqdm
 argparse
 python-dotenv
+requests
