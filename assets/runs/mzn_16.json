@@ -36,6 +36,8 @@
             { "timeout": "--solver-time-limit 300000" },
             { "mzn2fzn": "" },
             { "verbose": "-v" },
+            { "threads": "-p 4" },
+            { "optimization": "-O5" },
             { "varchoice": "impact" },
             { "constrainchoice": "indomain_middle" },
             { "strategy": "complete" }
