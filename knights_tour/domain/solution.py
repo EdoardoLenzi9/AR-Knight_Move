@@ -7,7 +7,8 @@ __license__ = 'WTFPL2.0'
 
 
 class Solution(object):
-    
+    ''' Represents a solution (coverage, running time, tour) 
+    '''
 
     def __init__(self, name: str, checkerboard: list, n: int, 
                  k: int, coverage:int, time: str = None):

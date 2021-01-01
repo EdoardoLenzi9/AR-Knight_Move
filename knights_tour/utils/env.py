@@ -14,19 +14,7 @@ import os
 
 class Env(object):
 
-    MAX_CHARS_IN_BETWEEN = 'MAX_CHARS_IN_BETWEEN' 
     LOG_LEVEL = 'LOG_LEVEL'
-    MAX_LETTERS_IN_BETWEEN = 'MAX_LETTERS_IN_BETWEEN'
-    TAC_SOURCE = 'TAC_SOURCE'
-    TWIMED_SOURCE = 'TWIMED_SOURCE' 
-    SPACY_MODEL = 'SPACY_MODEL' 
-    DB = 'DB' 
-
-    TWITTER = 'Twitter'
-    LOCAL_STORAGE = 'LocalStorage'
-    INTEGRATION_TEST_DB = 'INTEGRATION_TEST_DB'
-    TEST_DB = 'TEST_DB'
-    DEV_DB = 'DEV_DB'
 
 
     @staticmethod

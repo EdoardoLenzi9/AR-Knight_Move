@@ -8,7 +8,11 @@ import re
 
 
 class OutputParser(object):
-    
+    ''' The output of the subprocess Minizinc or Clingo is unstructured,
+        this class taked care of parse that output and return a Solution object
+    '''
+
+
     @staticmethod
     def parse(task: Task, output:str):
         if task.target == loc.CLINGO:

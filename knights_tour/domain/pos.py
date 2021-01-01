@@ -7,7 +7,9 @@ __license__ = 'WTFPL2.0'
 
 
 class Pos(object):
-    
+    ''' Represents a position in a 2D 
+        Cartesian Space (checkerboard)
+    '''
 
     def __init__(self, x: int, y:int):
         self.x = x

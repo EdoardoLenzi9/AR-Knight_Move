@@ -1,5 +1,5 @@
+python-dotenv
+argparse
+shutil
 numpy
 tqdm
-argparse
-python-dotenv
-requests

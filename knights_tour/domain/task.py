@@ -12,7 +12,9 @@ import os
 
 
 class Task(object):
-    
+    ''' Represents a Task, a problem instance
+    '''
+
 
     def __init__(self, name: str, target: str, n: int, k: int, 
                  knight1: Pos, knight2: Pos, occ: list, params: dict):

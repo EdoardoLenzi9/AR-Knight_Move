@@ -6,9 +6,6 @@ __version__ = '1.0'
 __license__ = 'WTFPL2.0'
 
 
-import requests
-import zipfile
-import pickle 
 import shutil
 import json
 import os
@@ -22,53 +19,6 @@ import sys
 
 def rmdir(dir_path):
     shutil.rmtree(dir_path)
-
-
-def wget(url, path):
-    file = requests.get(url)
-    open(path, 'wb').write(file.content)
-
-
-def wget_with_progressbar(url, path):
-
-    '''see https://stackoverflow.com/questions/15644964/python-progress-bar-and-downloads'''
-
-    with open(path, 'wb') as f:
-        LOG.info('Downloading %s' % path)
-        response = requests.get(url, stream=True)
-        total_length = response.headers.get('content-length')
-
-        if total_length is None: # no content length header
-            f.write(response.content)
-        else:
-            dl = 0
-            total_length = int(total_length)
-            for data in response.iter_content(chunk_size=4096):
-                dl += len(data)
-                f.write(data)
-                done = int(50 * dl / total_length)
-                sys.stdout.write('\r[%s%s]' % ('=' * done, ' ' * (50-done)) )    
-                sys.stdout.flush()
-
-
-def decompress_zip(zip_path):
-    '''Decompress a zip archive in tmp/'''
-
-    if not path.isfile(zip_path):
-        raise FileNotFoundError(zip_path + ' not found')
-
-    with zipfile.ZipFile(zip_path, 'r') as zip:
-        zip.extractall(loc.ASSETS)
-
-
-def to_pickle(obj, path):
-    with open(path, 'wb') as f:
-        pickle.dump(obj, f,  protocol=pickle.HIGHEST_PROTOCOL)
-
-
-def from_pickle(path):
-    with open(path, 'rb') as f:
-        return pickle.load(f)
 
 
 def to_json(obj, path):

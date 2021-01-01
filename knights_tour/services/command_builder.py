@@ -6,8 +6,14 @@ import knights_tour.utils.file_manager as fm
 import os 
 import re 
 
+
 class CommandBuilder(object):
-    
+    ''' This class is used for building a bash script form a Task
+        The script will contain all the information needed to launch
+        Minizinc or Clingo on a certain problem instance
+    '''
+
+
     @staticmethod
     def build_command(task: Task):
         if task.target == loc.CLINGO:
@@ -22,9 +28,6 @@ class CommandBuilder(object):
         for m in re.findall(r'\[\[[^\[]+\]\]', cmd):
             t = m.replace("[[", "").replace("]]", "")
             cmd = cmd.replace(m, task.params[t])
-        #cmd = cmd.replace('[[solver]]', task.params['solver'])
-        #cmd = cmd.replace('[[allsolutions]]', task.params['allsolutions'])
-        #cmd = cmd.replace('[[timeout]]', task.params['timeout'])
         fm.to_txt(cmd, loc.abs_path([task.folder, "command.sh"]))
         return f"sh {os.path.join(task.folder, 'command.sh')} {os.path.join(task.folder, loc.MINIZINC_MODEL)} {os.path.join(task.folder, loc.MINIZINC_DATABASE)}"
 

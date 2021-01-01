@@ -7,6 +7,10 @@ import re
 import os 
 
 class ModelBuilder(object):
+    ''' Similarly to CommandBuilder, builds a Minizinc or Clingo 
+        model from a Task (the task parameters can impact on the model 
+        declaration)
+    '''
 
 
     @staticmethod

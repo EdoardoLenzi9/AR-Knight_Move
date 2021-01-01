@@ -61,16 +61,22 @@ class CliHandler(object):
         os.mkdir(loc.LOGS_PATH)
 
 
+    # generates a new run in assets/runs/
     def generate_handler(self, json_filename):
 
-        clingo_params = [{ "varchoice": "varchoice"}, 
-                         { "...":        "..." }]
+        clingo_params   = [ ]
         
         minizinc_params = [{ "solver":          "gecode"}, 
-                           { "allsolutions":    "" }, 
-                           #{ "allsolutions":    "--all-solutions" },
+                           { "allsolutions":    "--all-solutions" }, 
                            { "mzn2fzn":         "" }, 
                            #{ "mzn2fzn":         "-c" }, 
+                           { "threads":         "-p 4" },
+                           { "optimization":    "-O5" },
+                           { "verbose":         "" },
+                           #{ "verbose":         "-v" },
+                           { "varchoice":       "impact" },
+                           { "constrainchoice": "indomain_middle" },
+                           { "strategy":        "complete" },
                            { "timeout":         "--solver-time-limit 300000" }]
         
         tasks = []
@@ -103,6 +109,7 @@ class CliHandler(object):
         fm.to_json(tasks, loc.abs_path([loc.RUNS_PATH, json_filename]))
 
 
+    # runs a run from assets/runs/
     def run_handler(self, json_filename):
         json = fm.from_json(loc.abs_path([loc.RUNS_PATH, json_filename]))
         solutions = []
@@ -119,28 +126,26 @@ class CliHandler(object):
                     occ = []
                     for o in t["occ"]:
                         occ.append(Pos(o["x"], o["y"]))
-                    task = Task( t["name"],
-                                t["target"],
-                                t["n"],
-                                t["k"],
-                                knight1,
-                                knight2,
-                                occ,
-                                params )
+                    task = Task( t["name"], t["target"],
+                                t["n"],     t["k"],
+                                knight1,    knight2,
+                                occ,        params )
                     sol = self.task_handler(task)
-                    #print(sol)
+
                     solutions.append(sol)
                     l.write(str(sol))
                 except: 
-                    print(f"\n\nFFFFAILLLLL\n\n")
+                    print(f"\n\nFAIL\n\n")
+
         #solutions.sort(key=lambda x: x.time, reverse=False)
-        solutions.sort(key=lambda x: x.pcoverage, reverse=False)
-        with open(f"{json_filename}.sort.log", 'w') as l:
+        #solutions.sort(key=lambda x: x.pcoverage, reverse=False)
+
+        with open(os.path.join(loc.LOGS_PATH, f"{json_filename}.log"), 'w') as log:
             for s in solutions:
-                print(s)
-                l.write(str(s))
+                log.write(str(s))
 
 
+    # Runs a task
     def task_handler(self, task: Task):
         
         print(f"\n\nTask {task.name} started")
@@ -153,6 +158,7 @@ class CliHandler(object):
         return solution
 
 
+    # Runs a certain bash command in a new process collecting the output
     def run_command(self, command: str):
         command = ' '.join([command])
         start_time = time.time()
@@ -166,7 +172,7 @@ class CliHandler(object):
                 for line in iter(process.stdout.readline, b''):
                     line = str(line, 'utf-8')
                     output += line
-                    # print(line)
+
             print("Task ended in: " + str(int(time.time()-start_time)) + " sec\n\n")
             process.kill()
         return output
