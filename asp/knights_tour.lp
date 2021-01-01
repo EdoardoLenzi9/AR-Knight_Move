@@ -31,13 +31,17 @@ occ(T+2,X,Y) :- step(T,X,Y), time(T), pos(X), pos(Y), time(T+2).
 
 % Posso avere al massimo uno step per turno
 0 { step(T,X,Y) : pos(X), pos(Y) } 1 :- time(T).
-halting_time(T) :- time(T), {step(T,X,Y) : pos(X), pos(Y) } == 0, T > 3. 
+% 0 { occ(T,X,Y) : pos(X), pos(Y) } 0 :- {step(T,X,Y) : pos(X), pos(Y) } = 0, time(T), T > 3.
 
-%e_halting_time(S) :- S = #max { T : occ(T,X,Y), pos(X), pos(Y), T \ 2 = 0}, time(S).
-%o_halting_time(S) :- S = #max { T : occ(T,X,Y), pos(X), pos(Y), T \ 2 = 1}, time(S).
-halting_time(S) :- S = #min {T : halting_time(T)}, time(S).
+ :- occ(T, X, Y), halting_time(T), time(T), pos(X), pos(Y).
 
-#maximize { T@1 : halting_time(T) }.
+halting_time(T+2) :- time(T), {step(T,X,Y) : pos(X), pos(Y) } = 0, T > 3. 
+
+crit(S) :- S = #min {T : halting_time(T)}, time(S).
+
+
+#maximize { T@1 : crit(T) }.
 
 #show occ/3.
-#show halting_time/1.
+#show crit/1.
+%#show halting_time/1.
