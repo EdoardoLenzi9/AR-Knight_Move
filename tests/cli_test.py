@@ -38,7 +38,7 @@ class CliTest(unittest.TestCase):
         '''
 
     def test(self):
-        command = '--run mzn_6.json'.split()
+        command = '--run lp.json'.split()
         #command = '--generate ciao.json'.split()
         
         args = Parser().parse_args(command)    

@@ -26,9 +26,9 @@ class ModelBuilder(object):
 
         database = ""
         for o in task.occ:
-            database += f"position(1,{o.x},{o.y}).\n"
-        database += f"position(2,{task.knight1.x},{task.knight1.y}).\n"
-        database += f"position(3,{task.knight2.x},{task.knight2.y}).\n"
+            database += f"occ(1,{o.x},{o.y}).\n"
+        database += f"occ(2,{task.knight1.x},{task.knight1.y}).\n"
+        database += f"occ(3,{task.knight2.x},{task.knight2.y}).\n"
         fm.to_txt(database, os.path.join(task.folder, loc.CLINGO_DATABASE))
 
 

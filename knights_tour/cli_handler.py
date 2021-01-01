@@ -132,7 +132,7 @@ class CliHandler(object):
                     solutions.append(sol)
                     l.write(str(sol))
                 except: 
-                    print(f"fail")
+                    print(f"\n\nFFFFAILLLLL\n\n")
         #solutions.sort(key=lambda x: x.time, reverse=False)
         solutions.sort(key=lambda x: x.pcoverage, reverse=False)
         with open(f"{json_filename}.sort.log", 'w') as l:

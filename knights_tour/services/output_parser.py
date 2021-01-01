@@ -21,19 +21,21 @@ class OutputParser(object):
     def parse_clingo(task: Task, output:str):
         checkerboard = [[0 for y in range(task.n)] for x in range(task.n)]
         tour = [None]*(task.n*task.n) 
-        for m in re.findall(r'position\([0-9]+,[0-9]+,[0-9]+\)', output):
-            m = m.replace("position(", "").replace(")", "")
+        output = output.split('Answer')[-1]
+        for m in re.findall(r'occ\([0-9]+,[0-9]+,[0-9]+\)', output):
+            m = m.replace("occ(", "").replace(")", "")
             m = m.split(",")
-            t = int(m[0])-1
-            x = int(m[1])-1
-            y = int(m[2])-1
+            t = int(m[0]) -1
+            x = int(m[1]) -1
+            y = int(m[2]) -1
             tour[t] = Pos(x,y)
             checkerboard[x][y] = t
         tour = list(filter(lambda x: x is not None, tour[1:]))
-        for i in range(1, len(tour) - 1):
-            assert OutputParser.valid_move(tour[i], tour[i+1])
+        time = float(output.split("\n")[-2].split(":")[1].replace("s","").strip())
+#        for i in range(1, len(tour) - 1):
+#            assert OutputParser.valid_move(tour[i], tour[i+1])
             
-        return Solution(checkerboard, task.n, task.k, len(tour))
+        return Solution(task.name, checkerboard, task.n, task.k, len(tour), time)
 
 
     @staticmethod

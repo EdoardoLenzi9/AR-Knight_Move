@@ -1,0 +1,152 @@
+[ 
+    {
+        "name": "0_8x8_minizinc_bench1",
+        "target": "minizinc",
+        "n": 8,
+        "k": 1,
+        "knight1": {
+            "x": 1,
+            "y": 1
+        },
+        "knight2": {
+            "x": 4,
+            "y": 4
+        },
+        "occ": [
+            {
+                "x": 1,
+                "y": 4
+            }
+        ],
+        "params": [
+            { "solver": "gecode" },
+            { "allsolutions": "--all-solutions" },
+            { "timeout": "--solver-time-limit 300000" },
+            { "mzn2fzn": "" },
+            { "verbose": "-v" },
+            { "varchoice": "input_order" },
+            { "constrainchoice": "indomain_middle" },
+            { "strategy": "complete" }
+        ]
+    },
+    {
+        "name": "0_10x10_minizinc_bench1",
+        "target": "minizinc",
+        "n": 10,
+        "k": 1,
+        "knight1": {
+            "x": 1,
+            "y": 1
+        },
+        "knight2": {
+            "x": 4,
+            "y": 4
+        },
+        "occ": [
+            {
+                "x": 1,
+                "y": 4
+            }
+        ],
+        "params": [
+            { "solver": "gecode" },
+            { "allsolutions": "--all-solutions" },
+            { "timeout": "--solver-time-limit 300000" },
+            { "mzn2fzn": "" },
+            { "verbose": "-v" },
+            { "varchoice": "input_order" },
+            { "constrainchoice": "indomain_middle" },
+            { "strategy": "complete" }
+        ]
+    },
+    {
+        "name": "0_12x12_minizinc_bench1",
+        "target": "minizinc",
+        "n": 12,
+        "k": 1,
+        "knight1": {
+            "x": 1,
+            "y": 1
+        },
+        "knight2": {
+            "x": 4,
+            "y": 4
+        },
+        "occ": [
+            {
+                "x": 1,
+                "y": 4
+            }
+        ],
+        "params": [
+            { "solver": "gecode" },
+            { "allsolutions": "--all-solutions" },
+            { "timeout": "--solver-time-limit 300000" },
+            { "mzn2fzn": "" },
+            { "verbose": "-v" },
+            { "varchoice": "input_order" },
+            { "constrainchoice": "indomain_middle" },
+            { "strategy": "complete" }
+        ]
+    },
+    {
+        "name": "0_14x14_minizinc_bench1",
+        "target": "minizinc",
+        "n": 14,
+        "k": 1,
+        "knight1": {
+            "x": 1,
+            "y": 1
+        },
+        "knight2": {
+            "x": 4,
+            "y": 4
+        },
+        "occ": [
+            {
+                "x": 1,
+                "y": 4
+            }
+        ],
+        "params": [
+            { "solver": "gecode" },
+            { "allsolutions": "--all-solutions" },
+            { "timeout": "--solver-time-limit 300000" },
+            { "mzn2fzn": "" },
+            { "verbose": "-v" },
+            { "varchoice": "input_order" },
+            { "constrainchoice": "indomain_middle" },
+            { "strategy": "complete" }
+        ]
+    },
+    {
+        "name": "0_16x16_minizinc_bench1",
+        "target": "minizinc",
+        "n": 16,
+        "k": 1,
+        "knight1": {
+            "x": 1,
+            "y": 1
+        },
+        "knight2": {
+            "x": 4,
+            "y": 4
+        },
+        "occ": [
+            {
+                "x": 1,
+                "y": 4
+            }
+        ],
+        "params": [
+            { "solver": "gecode" },
+            { "allsolutions": "--all-solutions" },
+            { "timeout": "--solver-time-limit 300000" },
+            { "mzn2fzn": "" },
+            { "verbose": "-v" },
+            { "varchoice": "input_order" },
+            { "constrainchoice": "indomain_middle" },
+            { "strategy": "complete" }
+        ]
+    }
+]
