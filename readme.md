@@ -1,4 +1,4 @@
-# Knight Move - AR 2018/2019
+# Knight Tour - AR 2018/2019
 
 ## Task
 
