@@ -6,7 +6,7 @@
 
 ## Get Started
 
-Replace the path in `minizinc.sh` with your local path
+Read the `Code Overview` at page 15 of the [documentation](documentation/Automated_Reasoning.pdf)
 
 ---
 ## Disclaimer
