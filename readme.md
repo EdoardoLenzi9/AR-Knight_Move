@@ -6,7 +6,7 @@
 
 ## Get Started
 
-Read the `Code Overview` at page 15 of the [documentation](documentation/Automated_Reasoning.pdf)
+Read the `Code Overview` chapter at page 15 of the [documentation](documentation/Automated_Reasoning.pdf)
 
 ---
 ## Disclaimer
