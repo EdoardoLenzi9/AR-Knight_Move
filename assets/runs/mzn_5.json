@@ -23,11 +23,11 @@
             { "allsolutions": "--all-solutions" },
             { "timeout": "--solver-time-limit 300000" },
             { "mzn2fzn": "" },
-            { "verbose": "-v" },            
+            { "verbose": "-v" },
             { "threads": "-p 4" },
             { "optimization": "-O5" },
             { "varchoice": "impact" },
-            { "constrainchoice": "indomain_random" },
+            { "constrainchoice": "indomain_middle" },
             { "strategy": "complete" }
         ]
     }

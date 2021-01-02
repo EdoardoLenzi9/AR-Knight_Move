@@ -20,11 +20,13 @@
         ],
         "params": [
             { "solver": "gecode" },
-            { "allsolutions": "" },
+            { "allsolutions": "--all-solutions" },
             { "timeout": "--solver-time-limit 300000" },
             { "mzn2fzn": "" },
             { "verbose": "-v" },
-            { "varchoice": "anti_first_fail" },
+            { "threads": "-p 4" },
+            { "optimization": "-O5" },
+            { "varchoice": "impact" },
             { "constrainchoice": "indomain_middle" },
             { "strategy": "complete" }
         ]

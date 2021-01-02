@@ -15,6 +15,7 @@ import os
 class Env(object):
 
     LOG_LEVEL = 'LOG_LEVEL'
+    MINIZINC = 'MINIZINC'
 
 
     @staticmethod

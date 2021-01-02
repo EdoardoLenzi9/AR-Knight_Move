@@ -6,6 +6,8 @@ import knights_tour.utils.file_manager as fm
 import os 
 import re 
 
+from knights_tour.utils.env import Env
+
 
 class CommandBuilder(object):
     ''' This class is used for building a bash script form a Task
@@ -25,6 +27,7 @@ class CommandBuilder(object):
     @staticmethod
     def build_mzn_command(task: Task):
         cmd = fm.from_txt(loc.MINIZINC_CMD_PATH)
+        cmd = cmd.replace("[[MZN_PATH]]", Env.get_value(Env.MINIZINC))
         for m in re.findall(r'\[\[[^\[]+\]\]', cmd):
             t = m.replace("[[", "").replace("]]", "")
             cmd = cmd.replace(m, task.params[t])

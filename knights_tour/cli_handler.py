@@ -115,7 +115,7 @@ class CliHandler(object):
         solutions = []
         with open(f"{json_filename}.log", 'w') as l:
             for t in tqdm(json):
-                try:
+#                try:
                     knight1 = Pos(t["knight1"]["x"], t["knight1"]["y"])
                     knight2 = Pos(t["knight2"]["x"], t["knight2"]["y"])
                     params = {}
@@ -134,8 +134,8 @@ class CliHandler(object):
 
                     solutions.append(sol)
                     l.write(str(sol))
-                except: 
-                    print(f"\n\nFAIL\n\n")
+#                except: 
+#                    print(f"\n\nFAIL\n\n")
 
         #solutions.sort(key=lambda x: x.time, reverse=False)
         #solutions.sort(key=lambda x: x.pcoverage, reverse=False)

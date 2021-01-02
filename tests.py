@@ -10,8 +10,6 @@ __license__ = 'WTFPL2.0'
 from knights_tour.utils.env import Env
 Env.load()
 
-Env.set_value(Env.DB, Env.TEST_DB)
-
 
 # load tests/
 import unittest

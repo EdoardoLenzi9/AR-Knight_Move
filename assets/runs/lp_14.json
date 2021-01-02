@@ -1,8 +1,8 @@
 [ 
     {
-        "name": "0_8x8_minizinc",
-        "target": "minizinc",
-        "n": 8,
+        "name": "0_14x14_clingo",
+        "target": "clingo",
+        "n": 14,
         "k": 5,
         "knight1": {
             "x": 5,
@@ -34,15 +34,6 @@
                 "y": 1
             }
         ],
-        "params": [
-            { "solver": "gecode" },
-            { "allsolutions": "--all-solutions" },
-            { "timeout": "--solver-time-limit 300000" },
-            { "mzn2fzn": "" },
-            { "verbose": "-v" },
-            { "varchoice": "smallest" },
-            { "constrainchoice": "indomain_reverse_split" },
-            { "strategy": "complete" }
-        ]
+        "params": [ ]
     }
 ]
