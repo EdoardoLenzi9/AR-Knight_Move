@@ -113,7 +113,7 @@ class CliHandler(object):
     def run_handler(self, json_filename):
         json = fm.from_json(loc.abs_path([loc.RUNS_PATH, json_filename]))
         solutions = []
-        with open(f"{json_filename}.log", 'w') as l:
+        with open(loc.abs_path([loc.LOGS_PATH, f"{json_filename}.log"]), 'w') as l:
             for t in tqdm(json):
                 try:
                     knight1 = Pos(t["knight1"]["x"], t["knight1"]["y"])
@@ -130,9 +130,13 @@ class CliHandler(object):
                                 t["n"],     t["k"],
                                 knight1,    knight2,
                                 occ,        params )
-                    if task.target == loc.MINIZINC and task.n < 16:
-                        sol = self.task_handler(task)
-
+                    #if task.target == loc.MINIZINC and task.n < 16:
+                    if task.target == loc.CLINGO:
+                        #sol = self.task_handler(task)
+                        lg = fm.from_txt(os.path.join(task.folder, task.name+".log"))
+                        sol = OutputParser.parse(task, lg)
+                        with open(loc.abs_path([task.folder, task.name+".solution.log"]), 'w') as s:
+                            s.write(str(sol))
                         solutions.append(sol)
                         l.write(str(sol))
                 except: 

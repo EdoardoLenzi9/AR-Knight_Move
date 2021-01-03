@@ -20,7 +20,7 @@ class CliTest(unittest.TestCase):
 
 
     def test_mzn_4(self):
-        command = '--run mzn_4.json'.split()
+        command = '--run benchmark.json'.split()
         args = Parser().parse_args(command)    
         CliHandler(args)
 
