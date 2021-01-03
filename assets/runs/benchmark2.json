@@ -1,0 +1,550 @@
+[
+    {
+            "name": "0_12x12_minizinc",
+            "target": "minizinc",
+            "n": 12,
+            "k": 8,
+            "knight1": {
+                "x": 11,
+                "y": 2
+            },
+            "knight2": {
+                "x": 9,
+                "y": 12
+            },
+            "occ": [
+                {
+                    "x": 11,
+                    "y": 4
+                },
+                {
+                    "x": 1,
+                    "y": 11
+                },
+                {
+                    "x": 12,
+                    "y": 3
+                },
+                {
+                    "x": 1,
+                    "y": 7
+                },
+                {
+                    "x": 9,
+                    "y": 2
+                },
+                {
+                    "x": 7,
+                    "y": 11
+                },
+                {
+                    "x": 5,
+                    "y": 5
+                },
+                {
+                    "x": 2,
+                    "y": 9
+                }
+            ],
+            "params": [
+                {
+                    "solver": "gecode"
+                },
+                {
+                    "allsolutions": "--all-solutions"
+                },
+                {
+                    "mzn2fzn": ""
+                },
+                {
+                    "threads": "-p 8"
+                },
+                {
+                    "optimization": ""
+                },
+                {
+                    "verbose": "-v"
+                },
+                {
+                    "varchoice": "impact"
+                },
+                {
+                    "constrainchoice": "indomain_middle"
+                },
+                {
+                    "strategy": "complete"
+                },
+                {
+                    "timeout": "--solver-time-limit 300000"
+                }
+            ]
+        },
+        {
+            "name": "7_12x12_minizinc",
+            "target": "minizinc",
+            "n": 12,
+            "k": 6,
+            "knight1": {
+                "x": 5,
+                "y": 6
+            },
+            "knight2": {
+                "x": 2,
+                "y": 10
+            },
+            "occ": [
+                {
+                    "x": 11,
+                    "y": 11
+                },
+                {
+                    "x": 10,
+                    "y": 5
+                },
+                {
+                    "x": 5,
+                    "y": 8
+                },
+                {
+                    "x": 6,
+                    "y": 7
+                },
+                {
+                    "x": 7,
+                    "y": 1
+                },
+                {
+                    "x": 4,
+                    "y": 11
+                }
+            ],
+            "params": [
+                {
+                    "solver": "gecode"
+                },
+                {
+                    "allsolutions": "--all-solutions"
+                },
+                {
+                    "mzn2fzn": ""
+                },
+                {
+                    "threads": "-p 8"
+                },
+                {
+                    "optimization": ""
+                },
+                {
+                    "verbose": "-v"
+                },
+                {
+                    "varchoice": "impact"
+                },
+                {
+                    "constrainchoice": "indomain_middle"
+                },
+                {
+                    "strategy": "complete"
+                },
+                {
+                    "timeout": "--solver-time-limit 300000"
+                }
+            ]
+        },
+    {
+            "name": "8_12x12_minizinc",
+            "target": "minizinc",
+            "n": 12,
+            "k": 9,
+            "knight1": {
+                "x": 6,
+                "y": 12
+            },
+            "knight2": {
+                "x": 7,
+                "y": 10
+            },
+            "occ": [
+                {
+                    "x": 3,
+                    "y": 6
+                },
+                {
+                    "x": 9,
+                    "y": 6
+                },
+                {
+                    "x": 4,
+                    "y": 5
+                },
+                {
+                    "x": 5,
+                    "y": 6
+                },
+                {
+                    "x": 3,
+                    "y": 7
+                },
+                {
+                    "x": 9,
+                    "y": 2
+                },
+                {
+                    "x": 6,
+                    "y": 6
+                },
+                {
+                    "x": 9,
+                    "y": 12
+                },
+                {
+                    "x": 5,
+                    "y": 5
+                }
+            ],
+            "params": [
+                {
+                    "solver": "gecode"
+                },
+                {
+                    "allsolutions": "--all-solutions"
+                },
+                {
+                    "mzn2fzn": ""
+                },
+                {
+                    "threads": "-p 8"
+                },
+                {
+                    "optimization": ""
+                },
+                {
+                    "verbose": "-v"
+                },
+                {
+                    "varchoice": "impact"
+                },
+                {
+                    "constrainchoice": "indomain_middle"
+                },
+                {
+                    "strategy": "complete"
+                },
+                {
+                    "timeout": "--solver-time-limit 300000"
+                }
+            ]
+        },
+    {
+            "name": "9_12x12_minizinc",
+            "target": "minizinc",
+            "n": 12,
+            "k": 4,
+            "knight1": {
+                "x": 2,
+                "y": 6
+            },
+            "knight2": {
+                "x": 2,
+                "y": 12
+            },
+            "occ": [
+                {
+                    "x": 6,
+                    "y": 11
+                },
+                {
+                    "x": 5,
+                    "y": 3
+                },
+                {
+                    "x": 10,
+                    "y": 9
+                },
+                {
+                    "x": 4,
+                    "y": 8
+                }
+            ],
+            "params": [
+                {
+                    "solver": "gecode"
+                },
+                {
+                    "allsolutions": "--all-solutions"
+                },
+                {
+                    "mzn2fzn": ""
+                },
+                {
+                    "threads": "-p 8"
+                },
+                {
+                    "optimization": ""
+                },
+                {
+                    "verbose": "-v"
+                },
+                {
+                    "varchoice": "impact"
+                },
+                {
+                    "constrainchoice": "indomain_middle"
+                },
+                {
+                    "strategy": "complete"
+                },
+                {
+                    "timeout": "--solver-time-limit 300000"
+                }
+            ]
+        },
+    {
+            "name": "11_12x12_minizinc",
+            "target": "minizinc",
+            "n": 12,
+            "k": 10,
+            "knight1": {
+                "x": 8,
+                "y": 3
+            },
+            "knight2": {
+                "x": 7,
+                "y": 10
+            },
+            "occ": [
+                {
+                    "x": 2,
+                    "y": 10
+                },
+                {
+                    "x": 8,
+                    "y": 6
+                },
+                {
+                    "x": 2,
+                    "y": 4
+                },
+                {
+                    "x": 10,
+                    "y": 7
+                },
+                {
+                    "x": 3,
+                    "y": 7
+                },
+                {
+                    "x": 11,
+                    "y": 1
+                },
+                {
+                    "x": 5,
+                    "y": 2
+                },
+                {
+                    "x": 6,
+                    "y": 2
+                },
+                {
+                    "x": 9,
+                    "y": 7
+                },
+                {
+                    "x": 7,
+                    "y": 1
+                }
+            ],
+            "params": [
+                {
+                    "solver": "gecode"
+                },
+                {
+                    "allsolutions": "--all-solutions"
+                },
+                {
+                    "mzn2fzn": ""
+                },
+                {
+                    "threads": "-p 8"
+                },
+                {
+                    "optimization": ""
+                },
+                {
+                    "verbose": "-v"
+                },
+                {
+                    "varchoice": "impact"
+                },
+                {
+                    "constrainchoice": "indomain_middle"
+                },
+                {
+                    "strategy": "complete"
+                },
+                {
+                    "timeout": "--solver-time-limit 300000"
+                }
+            ]
+        },
+    {
+            "name": "12_12x12_minizinc",
+            "target": "minizinc",
+            "n": 12,
+            "k": 6,
+            "knight1": {
+                "x": 2,
+                "y": 6
+            },
+            "knight2": {
+                "x": 11,
+                "y": 8
+            },
+            "occ": [
+                {
+                    "x": 12,
+                    "y": 5
+                },
+                {
+                    "x": 4,
+                    "y": 4
+                },
+                {
+                    "x": 5,
+                    "y": 9
+                },
+                {
+                    "x": 7,
+                    "y": 8
+                },
+                {
+                    "x": 12,
+                    "y": 7
+                },
+                {
+                    "x": 9,
+                    "y": 3
+                }
+            ],
+            "params": [
+                {
+                    "solver": "gecode"
+                },
+                {
+                    "allsolutions": "--all-solutions"
+                },
+                {
+                    "mzn2fzn": ""
+                },
+                {
+                    "threads": "-p 8"
+                },
+                {
+                    "optimization": ""
+                },
+                {
+                    "verbose": "-v"
+                },
+                {
+                    "varchoice": "impact"
+                },
+                {
+                    "constrainchoice": "indomain_middle"
+                },
+                {
+                    "strategy": "complete"
+                },
+                {
+                    "timeout": "--solver-time-limit 300000"
+                }
+            ]
+        },
+    {
+            "name": "15_12x12_minizinc",
+            "target": "minizinc",
+            "n": 12,
+            "k": 10,
+            "knight1": {
+                "x": 12,
+                "y": 5
+            },
+            "knight2": {
+                "x": 6,
+                "y": 4
+            },
+            "occ": [
+                {
+                    "x": 5,
+                    "y": 2
+                },
+                {
+                    "x": 1,
+                    "y": 5
+                },
+                {
+                    "x": 9,
+                    "y": 10
+                },
+                {
+                    "x": 8,
+                    "y": 10
+                },
+                {
+                    "x": 5,
+                    "y": 9
+                },
+                {
+                    "x": 2,
+                    "y": 11
+                },
+                {
+                    "x": 5,
+                    "y": 7
+                },
+                {
+                    "x": 10,
+                    "y": 4
+                },
+                {
+                    "x": 10,
+                    "y": 7
+                },
+                {
+                    "x": 8,
+                    "y": 2
+                }
+            ],
+            "params": [
+                {
+                    "solver": "gecode"
+                },
+                {
+                    "allsolutions": "--all-solutions"
+                },
+                {
+                    "mzn2fzn": ""
+                },
+                {
+                    "threads": "-p 8"
+                },
+                {
+                    "optimization": ""
+                },
+                {
+                    "verbose": "-v"
+                },
+                {
+                    "varchoice": "impact"
+                },
+                {
+                    "constrainchoice": "indomain_middle"
+                },
+                {
+                    "strategy": "complete"
+                },
+                {
+                    "timeout": "--solver-time-limit 300000"
+                }
+            ]
+        }
+]
