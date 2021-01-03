@@ -71,7 +71,7 @@ class OutputParser(object):
         for m in re.findall(r'occ\([0-9]+,[0-9]+,[0-9]+\)', output):
             m = m.replace("occ(", "").replace(")", "")
             m = m.split(",")
-            t = int(m[0]) -1
+            t = int(m[0])
             x = int(m[1]) -1
             y = int(m[2]) -1
             tour[t] = Pos(x,y)
