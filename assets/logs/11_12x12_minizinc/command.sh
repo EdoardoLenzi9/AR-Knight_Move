@@ -15,7 +15,7 @@ if test "$#" -ne 2; then
 		      	--all-solutions						\
 		      	--solver-time-limit 300000				            	\
 				-v								\
-				-p 4								\
+				-p 8								\
 										\
 			  	$1 
 else 
@@ -25,7 +25,7 @@ else
 		      	--all-solutions						\
 		      	--solver-time-limit 300000				            	\
 				-v								\
-				-p 4								\
+				-p 8								\
 										\
 			  	$1 										\
 				-d $2

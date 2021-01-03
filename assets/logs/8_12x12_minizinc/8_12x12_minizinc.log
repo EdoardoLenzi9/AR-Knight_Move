@@ -512,19 +512,19 @@ processing data file '/mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/8_12x12
  done parsing (0.04 s)
 Flattening ...
 	CompilePass: Flatten with '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode/' library ...
-MIP domains ... done (1.85 s)
-Optimizing ... done (1.95 s)
-Converting to old FlatZinc ... done (2.12 s)
- done (2.12 s)
- done (2.16 s), max stack depth 16
+MIP domains ... done (1.84 s)
+Optimizing ... done (1.94 s)
+Converting to old FlatZinc ... done (2.10 s)
+ done (2.10 s)
+ done (2.14 s), max stack depth 16
 Maximum memory 49 Mbytes.
       % SOLVING PHASE
 FZN solver plugin, compiled  Nov 24 2020  23:00:32
-Using FZN solver /mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/bin/fzn-gecode for solving, parameters: -a -p 4 -t 300000 
+Using FZN solver /mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/bin/fzn-gecode for solving, parameters: -a -p 8 -t 300000 
 Warning, replacing unsupported annotation indomain_middle with indomain_median
 Warning, ignored search annotation: impact
 Warning, ignored search annotation: outdomain_max
 Warning, replacing unsupported annotation indomain_interval with indomain_split
 Warning, replacing unsupported annotation indomain_interval with indomain_split
 =====UNKNOWN=====
-   Done (overall time 302.69 s).
+   Done (overall time 302.68 s).

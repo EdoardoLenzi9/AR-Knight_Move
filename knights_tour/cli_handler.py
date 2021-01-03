@@ -137,8 +137,8 @@ class CliHandler(object):
                     task = self.task_from_json(t)
 
                     #if task.target == loc.MINIZINC and task.n < 16:
-                    if task.target == loc.CLINGO:
-                        self.task_handler(task)
+                    #if task.target == loc.CLINGO:
+                    self.task_handler(task)
                 except: 
                     print(f"\n\nFAIL\n\n")
 
