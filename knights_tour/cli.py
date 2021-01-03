@@ -54,6 +54,10 @@ class Parser(object):
 
         self.parser.add_argument('--run', dest='run', metavar='N', type=str, nargs=1,
                                 help='Run an array of tasks (remember to specify the name of your run .json)')
+
+
+        self.parser.add_argument('--eval', dest='eval', metavar='N', type=str, nargs=1,
+                                help='Evaluate the results of a benchmark (remember to specify the name of your run .json)')
                                 
 
 

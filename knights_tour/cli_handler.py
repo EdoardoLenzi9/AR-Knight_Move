@@ -40,6 +40,8 @@ class CliHandler(object):
             self.generate_handler(args.generate[0])
         elif args.run is not None:
             self.run_handler(args.run[0])
+        elif args.eval is not None:
+            self.eval_handler(args.eval[0])
         elif args.clean:
             self.clean_handler()
         else:
@@ -109,45 +111,61 @@ class CliHandler(object):
         fm.to_json(tasks, loc.abs_path([loc.RUNS_PATH, json_filename]))
 
 
+    def task_from_json(self, t):
+        knight1 = Pos(t["knight1"]["x"], t["knight1"]["y"])
+        knight2 = Pos(t["knight2"]["x"], t["knight2"]["y"])
+        params = {}
+        for p in t['params']:
+            for k in p.keys():
+                params[k] = p[k]
+
+        occ = []
+        for o in t["occ"]:
+            occ.append(Pos(o["x"], o["y"]))
+        return Task( t["name"], t["target"],
+                     t["n"],     t["k"],
+                     knight1,    knight2,
+                     occ,        params )
+
+
     # runs a run from assets/runs/
     def run_handler(self, json_filename):
         json = fm.from_json(loc.abs_path([loc.RUNS_PATH, json_filename]))
-        solutions = []
         with open(loc.abs_path([loc.LOGS_PATH, f"{json_filename}.log"]), 'w') as l:
             for t in tqdm(json):
                 try:
-                    knight1 = Pos(t["knight1"]["x"], t["knight1"]["y"])
-                    knight2 = Pos(t["knight2"]["x"], t["knight2"]["y"])
-                    params = {}
-                    for p in t['params']:
-                        for k in p.keys():
-                            params[k] = p[k]
+                    task = self.task_from_json(t)
 
-                    occ = []
-                    for o in t["occ"]:
-                        occ.append(Pos(o["x"], o["y"]))
-                    task = Task( t["name"], t["target"],
-                                t["n"],     t["k"],
-                                knight1,    knight2,
-                                occ,        params )
                     #if task.target == loc.MINIZINC and task.n < 16:
                     if task.target == loc.CLINGO:
-                        #sol = self.task_handler(task)
-                        lg = fm.from_txt(os.path.join(task.folder, task.name+".log"))
-                        sol = OutputParser.parse(task, lg)
-                        with open(loc.abs_path([task.folder, task.name+".solution.log"]), 'w') as s:
-                            s.write(str(sol))
-                        solutions.append(sol)
-                        l.write(str(sol))
+                        self.task_handler(task)
                 except: 
                     print(f"\n\nFAIL\n\n")
+
+
+    # evaluate the results of a benchmark
+    def eval_handler(self, json_filename):
+        solutions = []
+        json = fm.from_json(loc.abs_path([loc.RUNS_PATH, json_filename]))
+        for t in tqdm(json):
+            try:
+                task = self.task_from_json(t)
+
+                lg = fm.from_txt(os.path.join(task.folder, task.name+".log"))
+                sol = OutputParser.parse(task, lg)
+                with open(loc.abs_path([task.folder, task.name+".solution.log"]), 'w') as s:
+                    s.write(str(sol))
+
+                solutions.append(sol)
+            except: 
+                solutions.append(task)
 
         #solutions.sort(key=lambda x: x.time, reverse=False)
         #solutions.sort(key=lambda x: x.pcoverage, reverse=False)
 
-        with open(os.path.join(loc.LOGS_PATH, f"{json_filename}.log"), 'w') as log:
-            for s in solutions:
-                log.write(str(s))
+        for s in solutions:
+            if type(s) == Task:
+                print(s.name)
 
 
     # Runs a task
