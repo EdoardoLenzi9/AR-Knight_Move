@@ -1,0 +1,46 @@
+clingo version 5.4.0
+Reading from ...ets/logs/17_8x8_clingo/knights_tour.lp ...
+Solving...
+Answer: 1
+occ(1,7,7) occ(1,4,8) occ(1,3,8) occ(1,7,4) occ(1,6,1) occ(2,1,6) occ(3,1,3) coverage(6)
+Optimization: -6
+Answer: 2
+occ(1,7,7) occ(1,4,8) occ(1,3,8) occ(1,7,4) occ(1,6,1) occ(2,1,6) occ(3,1,3) coverage(8) occ(4,2,8) occ(5,2,1) occ(6,4,7) occ(7,4,2)
+Optimization: -8
+Answer: 3
+occ(1,7,7) occ(1,4,8) occ(1,3,8) occ(1,7,4) occ(1,6,1) occ(2,1,6) occ(3,1,3) coverage(42) occ(8,1,5) occ(12,1,1) occ(18,1,2) occ(37,1,4) occ(4,2,8) occ(5,2,5) occ(10,2,3) occ(16,2,4) occ(22,2,1) occ(32,2,6) occ(35,2,2) occ(6,3,6) occ(14,3,2) occ(20,3,3) occ(30,3,4) occ(39,3,5) occ(51,3,7) occ(7,4,4) occ(13,4,3) occ(24,4,2) occ(28,4,6) occ(33,4,1) occ(34,4,7) occ(53,4,5) occ(11,5,5) occ(15,5,1) occ(25,5,2) occ(26,5,4) occ(41,5,6) occ(49,5,8) occ(55,5,7) occ(9,6,3) occ(21,6,5) occ(31,6,2) occ(36,6,8) occ(40,6,4) occ(47,6,6) occ(61,6,7) occ(17,7,2) occ(23,7,3) occ(27,7,1) occ(38,7,6) occ(43,7,5) occ(57,7,8) occ(19,8,4) occ(29,8,3) occ(45,8,7) occ(59,8,6) occ(63,8,8)
+Optimization: -42
+Answer: 4
+occ(1,7,7) occ(1,4,8) occ(1,3,8) occ(1,7,4) occ(1,6,1) occ(2,1,6) occ(3,1,3) coverage(44) occ(8,1,5) occ(12,1,1) occ(18,1,2) occ(37,1,4) occ(4,2,8) occ(5,2,5) occ(10,2,3) occ(16,2,4) occ(22,2,1) occ(32,2,6) occ(35,2,2) occ(6,3,6) occ(14,3,2) occ(20,3,3) occ(30,3,4) occ(39,3,5) occ(51,3,7) occ(7,4,4) occ(13,4,3) occ(24,4,2) occ(28,4,6) occ(33,4,1) occ(34,4,7) occ(53,4,5) occ(11,5,5) occ(15,5,1) occ(25,5,2) occ(26,5,4) occ(41,5,6) occ(49,5,8) occ(55,5,7) occ(9,6,3) occ(21,6,5) occ(31,6,2) occ(36,6,8) occ(40,6,4) occ(47,6,6) occ(61,6,7) occ(17,7,2) occ(23,7,3) occ(27,7,1) occ(38,7,6) occ(43,7,5) occ(57,7,8) occ(19,8,4) occ(29,8,3) occ(42,8,5) occ(45,8,7) occ(59,8,6) occ(63,8,8)
+Optimization: -44
+Answer: 5
+occ(1,7,7) occ(1,4,8) occ(1,3,8) occ(1,7,4) occ(1,6,1) occ(2,1,6) occ(3,1,3) coverage(55) occ(7,1,7) occ(13,1,2) occ(25,1,4) occ(31,1,5) occ(56,1,1) occ(4,2,8) occ(5,2,5) occ(11,2,4) occ(23,2,2) occ(27,2,6) occ(33,2,3) occ(34,2,1) occ(42,2,7) occ(9,3,6) occ(15,3,1) occ(29,3,4) occ(32,3,3) occ(40,3,5) occ(54,3,2) occ(6,4,7) occ(17,4,3) occ(21,4,1) occ(22,4,5) occ(35,4,4) occ(36,4,2) occ(44,4,6) occ(8,5,5) occ(20,5,7) occ(30,5,2) occ(38,5,4) occ(45,5,6) occ(52,5,1) occ(53,5,8) occ(14,6,7) occ(19,6,2) occ(24,6,4) occ(37,6,3) occ(46,6,5) occ(47,6,8) occ(51,6,6) occ(10,7,6) occ(18,7,8) occ(28,7,3) occ(39,7,1) occ(43,7,5) occ(50,7,2) occ(12,8,8) occ(16,8,6) occ(26,8,5) occ(41,8,3) occ(48,8,4) occ(49,8,7)
+Optimization: -55
+Answer: 6
+occ(1,7,7) occ(1,4,8) occ(1,3,8) occ(1,7,4) occ(1,6,1) occ(2,1,6) occ(3,1,3) coverage(56) occ(7,1,7) occ(13,1,2) occ(25,1,4) occ(31,1,5) occ(4,2,8) occ(5,2,5) occ(11,2,4) occ(23,2,2) occ(27,2,6) occ(33,2,3) occ(34,2,1) occ(42,2,7) occ(9,3,6) occ(15,3,1) occ(29,3,4) occ(32,3,3) occ(40,3,5) occ(54,3,2) occ(55,3,7) occ(6,4,7) occ(17,4,3) occ(21,4,1) occ(22,4,5) occ(35,4,4) occ(36,4,2) occ(44,4,6) occ(8,5,5) occ(20,5,7) occ(30,5,2) occ(38,5,4) occ(45,5,6) occ(52,5,1) occ(53,5,8) occ(14,6,7) occ(19,6,2) occ(24,6,4) occ(37,6,3) occ(46,6,5) occ(47,6,8) occ(51,6,6) occ(10,7,6) occ(18,7,8) occ(28,7,3) occ(39,7,1) occ(43,7,5) occ(50,7,2) occ(12,8,8) occ(16,8,6) occ(26,8,5) occ(41,8,3) occ(48,8,4) occ(49,8,7)
+Optimization: -56
+Answer: 7
+occ(1,7,7) occ(1,4,8) occ(1,3,8) occ(1,7,4) occ(1,6,1) occ(2,1,6) occ(3,1,3) coverage(57) occ(7,1,7) occ(13,1,2) occ(25,1,4) occ(31,1,5) occ(56,1,1) occ(4,2,8) occ(5,2,5) occ(11,2,4) occ(23,2,2) occ(27,2,6) occ(33,2,3) occ(34,2,1) occ(42,2,7) occ(9,3,6) occ(15,3,1) occ(29,3,4) occ(32,3,3) occ(40,3,5) occ(54,3,2) occ(55,3,7) occ(6,4,7) occ(17,4,3) occ(21,4,1) occ(22,4,5) occ(35,4,4) occ(36,4,2) occ(44,4,6) occ(8,5,5) occ(20,5,7) occ(30,5,2) occ(38,5,4) occ(45,5,6) occ(52,5,1) occ(53,5,8) occ(14,6,7) occ(19,6,2) occ(24,6,4) occ(37,6,3) occ(46,6,5) occ(47,6,8) occ(51,6,6) occ(10,7,6) occ(18,7,8) occ(28,7,3) occ(39,7,1) occ(43,7,5) occ(50,7,2) occ(12,8,8) occ(16,8,6) occ(26,8,5) occ(41,8,3) occ(48,8,4) occ(49,8,7)
+Optimization: -57
+Answer: 8
+occ(1,7,7) occ(1,4,8) occ(1,3,8) occ(1,7,4) occ(1,6,1) occ(2,1,6) occ(3,1,3) coverage(58) occ(7,1,7) occ(13,1,2) occ(25,1,4) occ(31,1,5) occ(56,1,1) occ(57,1,8) occ(4,2,8) occ(5,2,5) occ(11,2,4) occ(23,2,2) occ(27,2,6) occ(33,2,3) occ(34,2,1) occ(42,2,7) occ(9,3,6) occ(15,3,1) occ(29,3,4) occ(32,3,3) occ(40,3,5) occ(54,3,2) occ(55,3,7) occ(6,4,7) occ(17,4,3) occ(21,4,1) occ(22,4,5) occ(35,4,4) occ(36,4,2) occ(44,4,6) occ(8,5,5) occ(20,5,7) occ(30,5,2) occ(38,5,4) occ(45,5,6) occ(52,5,1) occ(53,5,8) occ(14,6,7) occ(19,6,2) occ(24,6,4) occ(37,6,3) occ(46,6,5) occ(47,6,8) occ(51,6,6) occ(10,7,6) occ(18,7,8) occ(28,7,3) occ(39,7,1) occ(43,7,5) occ(50,7,2) occ(12,8,8) occ(16,8,6) occ(26,8,5) occ(41,8,3) occ(48,8,4) occ(49,8,7)
+Optimization: -58
+Answer: 9
+occ(1,7,7) occ(1,4,8) occ(1,3,8) occ(1,7,4) occ(1,6,1) occ(2,1,6) occ(3,1,3) coverage(59) occ(6,1,8) occ(36,1,5) occ(42,1,2) occ(51,1,7) occ(57,1,4) occ(5,2,1) occ(8,2,6) occ(16,2,2) occ(34,2,7) occ(38,2,3) occ(44,2,4) occ(47,2,8) occ(53,2,5) occ(4,3,7) occ(10,3,4) occ(26,3,2) occ(32,3,5) occ(40,3,1) occ(49,3,6) occ(55,3,3) occ(7,4,2) occ(14,4,3) occ(18,4,1) occ(28,4,4) occ(45,4,7) occ(46,4,5) occ(56,4,6) occ(9,5,4) occ(12,5,5) occ(17,5,2) occ(20,5,3) occ(24,5,1) occ(30,5,6) occ(48,5,7) occ(58,5,8) occ(11,6,6) occ(15,6,4) occ(23,6,2) occ(29,6,3) occ(37,6,7) occ(43,6,8) occ(54,6,5) occ(19,7,3) occ(22,7,2) occ(27,7,1) occ(33,7,6) occ(39,7,5) occ(50,7,8) occ(13,8,5) occ(21,8,1) occ(25,8,3) occ(31,8,4) occ(35,8,8) occ(41,8,7) occ(52,8,6)
+Optimization: -59
+Answer: 10
+occ(1,7,7) occ(1,4,8) occ(1,3,8) occ(1,7,4) occ(1,6,1) occ(2,1,6) occ(3,1,3) coverage(60) occ(10,1,8) occ(14,1,4) occ(15,1,7) occ(18,1,2) occ(35,1,1) occ(39,1,5) occ(4,2,4) occ(5,2,1) occ(12,2,6) occ(13,2,5) occ(19,2,8) occ(37,2,3) occ(40,2,2) occ(41,2,7) occ(8,3,7) occ(9,3,4) occ(16,3,3) occ(17,3,6) occ(20,3,1) occ(33,3,2) occ(43,3,5) occ(6,4,5) occ(7,4,2) occ(11,4,6) occ(21,4,7) occ(38,4,1) occ(42,4,3) occ(55,4,4) occ(22,5,2) occ(23,5,5) occ(31,5,3) occ(44,5,1) occ(45,5,4) occ(52,5,7) occ(53,5,6) occ(58,5,8) occ(25,6,7) occ(28,6,4) occ(29,6,5) occ(36,6,2) occ(51,6,8) occ(56,6,6) occ(57,6,3) occ(24,7,1) occ(32,7,3) occ(46,7,2) occ(47,7,5) occ(50,7,6) occ(54,7,8) occ(26,8,3) occ(27,8,6) occ(30,8,5) occ(34,8,1) occ(48,8,4) occ(49,8,7) occ(59,8,2)
+Optimization: -60
+Answer: 11
+occ(1,7,7) occ(1,4,8) occ(1,3,8) occ(1,7,4) occ(1,6,1) occ(2,1,6) occ(3,1,3) coverage(61) occ(13,1,8) occ(19,1,5) occ(25,1,4) occ(46,1,2) occ(52,1,1) occ(59,1,7) occ(4,2,8) occ(5,2,5) occ(15,2,6) occ(21,2,7) occ(22,2,1) occ(27,2,2) occ(44,2,4) occ(50,2,3) occ(11,3,7) occ(17,3,4) occ(23,3,5) occ(24,3,3) occ(48,3,1) occ(54,3,2) occ(57,3,6) occ(6,4,7) occ(7,4,6) occ(20,4,2) occ(26,4,1) occ(29,4,3) occ(42,4,5) occ(55,4,4) occ(9,5,8) occ(18,5,4) occ(28,5,3) occ(31,5,5) occ(40,5,7) occ(45,5,6) occ(53,5,2) occ(56,5,1) occ(8,6,6) occ(16,6,2) occ(34,6,5) occ(37,6,7) occ(43,6,8) occ(47,6,4) occ(58,6,3) occ(12,7,3) occ(30,7,2) occ(33,7,6) occ(38,7,8) occ(39,7,5) occ(51,7,1) occ(10,8,5) occ(14,8,1) occ(32,8,4) occ(35,8,8) occ(36,8,6) occ(41,8,7) occ(49,8,3) occ(60,8,2)
+Optimization: -61
+*** Info : (clingo): INTERRUPTED by signal!
+SATISFIABLE
+
+TIME LIMIT   : 1
+Models       : 11+
+  Optimum    : unknown
+Optimization : -61
+Calls        : 1
+Time         : 300.000s (Solving: 299.69s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 299.999s

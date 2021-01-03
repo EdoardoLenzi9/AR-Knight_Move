@@ -43,10 +43,14 @@ constraint forall(i,j in 1..n)(occ[i,j] <= visited_cells);
 constraint forall(i, j in 1..n, t in 1..((n*n) div 2)-2) (
     (2*t) <= halting_time1  /\ 
     (2*t) <= halting_time2  /\
-    occ[i,j] = (2*t)        ->  exists(k in {-2, 2}, l in {-1, 1})(
-                                    (occ[i+k, j+l] = (2*t)+2) \/
-                                    (occ[i+l, j+k] = (2*t)+2) 
-                                ) \/
+    occ[i,j] = (2*t)        ->  if i<n-1 /\ j<n   then (occ[i+2, j+1] = (2*t)+2) else false endif \/
+                                if i<n-1 /\ j>1   then (occ[i+2, j-1] = (2*t)+2) else false endif \/
+                                if i>2   /\ j<n   then (occ[i-2, j+1] = (2*t)+2) else false endif \/
+                                if i>2   /\ j>1   then (occ[i-2, j-1] = (2*t)+2) else false endif \/
+                                if i<n   /\ j<n-1 then (occ[i+1, j+2] = (2*t)+2) else false endif \/
+                                if i<n   /\ j>2   then (occ[i+1, j-2] = (2*t)+2) else false endif \/
+                                if i>1   /\ j<n-1 then (occ[i-1, j+2] = (2*t)+2) else false endif \/
+                                if i>1   /\ j>2   then (occ[i-1, j-2] = (2*t)+2) else false endif \/
                                 halting_time1 = (2*t) );
 
 
@@ -54,11 +58,16 @@ constraint forall(i, j in 1..n, t in 1..((n*n) div 2)-2) (
 constraint forall(i, j in 1..n, t in 1..((n*n) div 2)-2) (
     ((2*t)+1) <= halting_time1  /\
     ((2*t)+1) <= halting_time2  /\
-    occ[i,j] = ((2*t)+1)        ->  exists(k in {-2, 2}, l in {-1, 1})(
-                                        (occ[i+k, j+l] = (2*t)+3) \/
-                                        (occ[i+l, j+k] = (2*t)+3) 
-                                    ) \/
-                                    halting_time2 = ((2*t)+2) );
+    occ[i,j] = ((2*t)+1)        ->  if i<n-1 /\ j<n   then (occ[i+2, j+1] = ((2*t)+3)) else false endif \/
+                                    if i<n-1 /\ j>1   then (occ[i+2, j-1] = ((2*t)+3)) else false endif \/
+                                    if i>2   /\ j<n   then (occ[i-2, j+1] = ((2*t)+3)) else false endif \/
+                                    if i>2   /\ j>1   then (occ[i-2, j-1] = ((2*t)+3)) else false endif \/
+                                    if i<n   /\ j<n-1 then (occ[i+1, j+2] = ((2*t)+3)) else false endif \/
+                                    if i<n   /\ j>2   then (occ[i+1, j-2] = ((2*t)+3)) else false endif \/
+                                    if i>1   /\ j<n-1 then (occ[i-1, j+2] = ((2*t)+3)) else false endif \/
+                                    if i>1   /\ j>2   then (occ[i-1, j-2] = ((2*t)+3)) else false endif \/
+                                    halting_time2 = ((2*t)+2)
+);
 
 
 % maximization criterion

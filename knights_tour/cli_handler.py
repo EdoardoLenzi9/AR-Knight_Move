@@ -130,7 +130,7 @@ class CliHandler(object):
                                 t["n"],     t["k"],
                                 knight1,    knight2,
                                 occ,        params )
-                    if task.target == loc.CLINGO:
+                    if task.target == loc.MINIZINC and task.n < 16:
                         sol = self.task_handler(task)
 
                         solutions.append(sol)

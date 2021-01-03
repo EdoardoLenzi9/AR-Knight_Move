@@ -52,10 +52,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -165,10 +165,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -278,10 +278,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -399,10 +399,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -536,10 +536,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -661,10 +661,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -786,10 +786,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -923,10 +923,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -1044,10 +1044,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -1165,10 +1165,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -1290,10 +1290,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -1399,10 +1399,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -1500,10 +1500,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -1605,10 +1605,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -1726,10 +1726,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -1867,10 +1867,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -2012,10 +2012,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -2137,10 +2137,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -2242,10 +2242,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -2367,10 +2367,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -2504,10 +2504,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -2633,10 +2633,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -2746,10 +2746,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -2859,10 +2859,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -2980,10 +2980,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -3105,10 +3105,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -3234,10 +3234,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -3367,10 +3367,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -3496,10 +3496,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -3609,10 +3609,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -3738,10 +3738,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -3867,10 +3867,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -3976,10 +3976,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -4101,10 +4101,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -4234,10 +4234,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -4355,10 +4355,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -4488,10 +4488,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -4629,10 +4629,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -4746,10 +4746,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -4855,10 +4855,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -4980,10 +4980,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -5105,10 +5105,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -5214,10 +5214,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -5327,10 +5327,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -5460,10 +5460,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -5597,10 +5597,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -5734,10 +5734,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -5859,10 +5859,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -5984,10 +5984,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -6101,10 +6101,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -6210,10 +6210,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -6343,10 +6343,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -6472,10 +6472,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -6577,10 +6577,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -6698,10 +6698,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -6843,10 +6843,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -6984,10 +6984,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -7109,10 +7109,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -7218,10 +7218,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -7331,10 +7331,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -7452,10 +7452,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -7581,10 +7581,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -7718,10 +7718,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -7839,10 +7839,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -7952,10 +7952,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -8069,10 +8069,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -8178,10 +8178,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -8303,10 +8303,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -8428,10 +8428,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -8537,10 +8537,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -8650,10 +8650,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -8775,10 +8775,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -8904,10 +8904,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -9037,10 +9037,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -9178,10 +9178,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -9315,10 +9315,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -9452,10 +9452,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -9573,10 +9573,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -9698,10 +9698,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -9831,10 +9831,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -9964,10 +9964,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -10101,10 +10101,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -10238,10 +10238,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -10367,10 +10367,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -10476,10 +10476,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -10589,10 +10589,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -10718,10 +10718,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -10843,10 +10843,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -10968,10 +10968,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -11109,10 +11109,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -11230,10 +11230,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -11339,10 +11339,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -11448,10 +11448,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -11569,10 +11569,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -11710,10 +11710,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -11843,10 +11843,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -11964,10 +11964,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -12077,10 +12077,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -12182,10 +12182,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
@@ -12283,10 +12283,10 @@
                 "threads": "-p 4"
             },
             {
-                "optimization": "-O5"
+                "optimization": ""
             },
             {
-                "verbose": ""
+                "verbose": "-v"
             },
             {
                 "varchoice": "impact"
