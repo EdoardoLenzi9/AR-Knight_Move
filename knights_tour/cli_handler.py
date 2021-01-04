@@ -24,6 +24,7 @@ from tqdm import tqdm
 from os import path
 import subprocess
 import random
+import numpy
 import time 
 import sys
 import os 
@@ -165,6 +166,18 @@ class CliHandler(object):
         for s in solutions:
             if type(s) == Task:
                 print(s.name)
+
+        solutions = list(filter(lambda x: type(x) != Task, solutions))
+        for i in [16]:
+            for t in [loc.CLINGO]:
+                si = list(filter(lambda x: x.n == i and t in x.name, solutions))
+                si_c = [x.coverage for x in si]
+                si_p = [x.pcoverage for x in si]
+                avg_si_c = sum(si_c) / len(si_c)
+                std = numpy.std(si_c)
+                avg_si_p = sum(si_p) / len(si_p)
+                print(f"\n n={i} | {t} | {avg_si_c} +- {std} | {avg_si_p}\n")
+
 
 
     # Runs a task
