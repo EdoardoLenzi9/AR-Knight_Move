@@ -150,7 +150,6 @@ class CliHandler(object):
         for t in tqdm(json):
             try:
                 task = self.task_from_json(t)
-
                 lg = fm.from_txt(os.path.join(task.folder, task.name+".log"))
                 sol = OutputParser.parse(task, lg)
                 with open(loc.abs_path([task.folder, task.name+".solution.log"]), 'w') as s:

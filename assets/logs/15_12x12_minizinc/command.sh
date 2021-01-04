@@ -16,7 +16,7 @@ if test "$#" -ne 2; then
 		      	--solver-time-limit 300000				            	\
 				-v								\
 				-p 8								\
-										\
+				-O1						\
 			  	$1 
 else 
 	$MINIZINC 	--solver gecode                    	\
@@ -26,7 +26,7 @@ else
 		      	--solver-time-limit 300000				            	\
 				-v								\
 				-p 8								\
-										\
+				-O1						\
 			  	$1 										\
 				-d $2
 fi

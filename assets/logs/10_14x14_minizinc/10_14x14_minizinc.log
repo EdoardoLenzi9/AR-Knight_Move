@@ -512,19 +512,430 @@ processing data file '/mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x1
  done parsing (0.04 s)
 Flattening ...
 	CompilePass: Flatten with '/mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/share/minizinc/gecode/' library ...
-MIP domains ... done (3.67 s)
-Optimizing ... done (3.88 s)
-Converting to old FlatZinc ... done (4.45 s)
- done (4.45 s)
- done (4.48 s), max stack depth 16
-Maximum memory 94 Mbytes.
+MIP domains ... done (5.11 s)
+Optimizing ... done (5.33 s)
+
+  WARNING: 
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:46.40:
+  Variable `k' shadows variable with the same name in line 2.6
+
+  WARNING: 
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:57.44:
+  Variable `k' shadows variable with the same name in line 2.6
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 1
+    with t = 1
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = -1
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 1
+    with t = 1
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = -1
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 1
+    with t = 1
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = 1
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 1
+    with t = 1
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = 1
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 1
+    with t = 1
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = 2
+    with l = -1
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 1
+    with t = 1
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = 2
+    with l = -1
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 1
+    with t = 2
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = -1
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 1
+    with t = 2
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = -1
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 1
+    with t = 2
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = 1
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 1
+    with t = 2
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = 1
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 1
+    with t = 2
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = 2
+    with l = -1
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 1
+    with t = 2
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = 2
+    with l = -1
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 1
+    with t = 3
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = -1
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 1
+    with t = 3
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = -1
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 1
+    with t = 3
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = 1
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 1
+    with t = 3
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = -2
+    with l = 1
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 1
+    with t = 3
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = 2
+    with l = -1
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  in binary '=' operator expression
+  in array access
+
+  WARNING: undefined result becomes false in Boolean context
+  (array access out of bounds)
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:43:
+  in call 'forall'
+  in array comprehension expression
+    with i = 1
+    with j = 1
+    with t = 3
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:44:
+  in binary '->' operator expression
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:46:
+  in binary '\/' operator expression
+  in call 'exists'
+  in array comprehension expression
+    with k = 2
+    with l = -1
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:47:
+  in binary '\/' operator expression
+  /mnt/HDD/elenzi/Dovier/AR-Knights_Tour/assets/logs/10_14x14_minizinc/knights_tour.mzn:48:
+  in binary '=' operator expression
+  in array access
+
+  WARNING: Further warnings have been suppressed.
+Converting to old FlatZinc ... done (5.71 s)
+ done (5.71 s)
+ done (5.75 s), max stack depth 19
+Maximum memory 141 Mbytes.
       % SOLVING PHASE
 FZN solver plugin, compiled  Nov 24 2020  23:00:32
-Using FZN solver /mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/bin/fzn-gecode for solving, parameters: -a -p 4 -t 300000 
+Using FZN solver /mnt/HDD/elenzi/Dovier/MiniZincIDE-2.5.3-bundle-linux-x86_64/bin/fzn-gecode for solving, parameters: -a -p 8 -t 300000 
 Warning, replacing unsupported annotation indomain_middle with indomain_median
 Warning, ignored search annotation: impact
 Warning, ignored search annotation: outdomain_max
 Warning, replacing unsupported annotation indomain_interval with indomain_split
 Warning, replacing unsupported annotation indomain_interval with indomain_split
-=====UNKNOWN=====
-   Done (overall time 305.56 s).
+[[99,113,114,129,130,136,135,125,139,144,143,148,1,100
+116,107,97,115,133,127,128,134,145,123,1,102,92,150
+111,101,131,112,1,132,138,137,142,141,146,149,98,88
+105,118,109,95,117,126,108,91,121,147,104,90,152,94
+83,77,103,124,110,93,119,140,106,156,151,96,86,161
+120,74,85,79,69,162,89,158,153,82,157,154,1,0
+75,81,122,76,87,33,67,80,34,29,1,84,159,28
+44,39,72,71,45,78,160,31,21,155,20,30,16,11
+70,73,42,41,35,65,23,36,27,32,3,13,26,0
+52,46,37,47,40,43,53,19,0,22,0,18,9,14
+58,68,54,48,63,49,38,25,55,5,15,24,0,0
+0,50,60,0,0,2,57,51,17,0,0,7,12,0
+66,56,0,61,62,0,0,4,0,0,0,8,0,0
+0,0,64,0,0,59,0,1,0,6,0,0,0,10]]
+----------
+   Done (overall time 306.84 s).
